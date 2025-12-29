@@ -1,0 +1,602 @@
+{
+    "searchParameters": {
+        "q": "estate agents in basildon",
+        "type": "maps",
+        "num": 10,
+        "page": 1,
+        "ll": "52.072992°, -0.252686°",
+        "engine": "google"
+    },
+    "ll": "@51.5741086,0.4626104,13z",
+    "places": [
+        {
+            "position": 1,
+            "title": "haart Estate Agents Basildon",
+            "address": "42 Southernhay, Basildon SS14 1ET, United Kingdom",
+            "latitude": 51.5703566,
+            "longitude": 0.46185299999999996,
+            "rating": 4.8,
+            "ratingCount": 682,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Property management company",
+                "Real estate agency",
+                "Real estate appraiser"
+            ],
+            "website": "https://www.haart.co.uk/branch-finder/basildon-estate-agents/?utm_source=organic_gmb&utm_medium=organic&referrer=organic_gmb&y_source=1_MzQ0NjU5MDUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+            "phoneNumber": "+44 1268 284656",
+            "openingHours": {
+                "Saturday": "9 AM–5 PM",
+                "Sunday": "Closed",
+                "Monday": "8:30 AM–6 PM",
+                "Tuesday": "8:30 AM–6 PM",
+                "Wednesday": "8:30 AM–6 PM",
+                "Thursday": "8:30 AM–6 PM",
+                "Friday": "8:30 AM–6 PM"
+            },
+            "bookingLinks": [
+                "https://valuation.haart.co.uk/?utm_source=gmb&utm_medium=organic&utm_campaign=valuation&utm_term=appointment_Basildon&utm_content=url&referrer=organic_gmb_valuation_url_appointment_Basildon&y_source=1_MzQ0NjU5MDUtNzE1LWxvY2F0aW9uLnJlc2VydmF0aW9uX3VybA%3D%3D"
+            ],
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipOj8f6j2Kj_SJtbgcnlph07cFiDEDRrYiwzCBrm",
+            "cid": "5234373151418966075",
+            "fid": "0x47d8c69afcdfce61:0x48a43aa5f82b603b",
+            "placeId": "ChIJYc7f_JrG2EcRO2Ar-KU6pEg"
+        },
+        {
+            "position": 2,
+            "title": "Roger Bates Properties - Independent Estate Agents & Lettings Basildon",
+            "address": "10 Whiteshott, Kingswood, Basildon SS16 5HF, United Kingdom",
+            "latitude": 51.5616807,
+            "longitude": 0.454785,
+            "rating": 4.9,
+            "ratingCount": 66,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Real estate appraiser",
+                "Real estate consultant"
+            ],
+            "website": "http://rogerbatesproperties.co.uk/",
+            "phoneNumber": "+44 7494 803917",
+            "openingHours": {
+                "Saturday": "8 AM–10 PM",
+                "Sunday": "8 AM–10 PM",
+                "Monday": "8 AM–10 PM",
+                "Tuesday": "8 AM–10 PM",
+                "Wednesday": "8 AM–10 PM",
+                "Thursday": "8 AM–10 PM",
+                "Friday": "8 AM–10 PM"
+            },
+            "bookingLinks": [
+                "https://rogerbatesproperties.co.uk/blog/free-property-valuation-in-basildon-from-professional-estate-agent/"
+            ],
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipMW0xce1xa4w1UZi_yWByvpWCZQ30XSxBf9re0_",
+            "cid": "13683768555657600722",
+            "fid": "0x47d8c70fed0e1a49:0xbde683006ca19ed2",
+            "placeId": "ChIJSRoO7Q_H2EcR0p6hbACD5r0"
+        },
+        {
+            "position": 3,
+            "title": "Douglas Allen Basildon Estate Agents",
+            "address": "67 Southernhay, Basildon SS14 1EU, United Kingdom",
+            "latitude": 51.5700783,
+            "longitude": 0.46235899999999996,
+            "rating": 4.8,
+            "ratingCount": 190,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Mortgage broker",
+                "Property management company",
+                "Real estate agency",
+                "Real estate consultant",
+                "Real estate rental agency"
+            ],
+            "website": "https://www.douglasallen.co.uk/estate-agent-in-basildon?utm_source=google&utm_medium=Yext&utm_campaign=YextListings",
+            "phoneNumber": "+44 1268 293993",
+            "openingHours": {
+                "Saturday": "9 AM–5 PM",
+                "Sunday": "Closed",
+                "Monday": "9 AM–5:30 PM",
+                "Tuesday": "9 AM–5:30 PM",
+                "Wednesday": "9 AM–5:30 PM",
+                "Thursday": "9 AM–5:30 PM",
+                "Friday": "9 AM–5:30 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipPS-g7DswV5XR-ryR2Kkd7ent9zegDM1HXrOGL0",
+            "cid": "7803753841512702699",
+            "fid": "0x47d8c69a433f4215:0x6c4c80c5d5f462eb",
+            "placeId": "ChIJFUI_Q5rG2EcR62L01cWATGw"
+        },
+        {
+            "position": 4,
+            "title": "Kingswood Estate Agents Basildon",
+            "address": "36 Southernhay, Basildon SS14 1ET, United Kingdom",
+            "latitude": 51.570495199999996,
+            "longitude": 0.4619964,
+            "rating": 4.8,
+            "ratingCount": 250,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Mortgage broker",
+                "Property management company",
+                "Real estate appraiser",
+                "Real estate rental agency"
+            ],
+            "website": "http://www.kingswoodbasildon.com/",
+            "phoneNumber": "+44 1268 272222",
+            "openingHours": {
+                "Saturday": "9 AM–4 PM",
+                "Sunday": "Closed",
+                "Monday": "9 AM–6 PM",
+                "Tuesday": "9 AM–6 PM",
+                "Wednesday": "9 AM–6 PM",
+                "Thursday": "9 AM–6 PM",
+                "Friday": "9 AM–6 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipPPhwuIwVGX0L1EQNpGUuRDV5VOCq-bDMrCCTdI",
+            "cid": "7315727748943197708",
+            "fid": "0x47d8c69a69375961:0x6586afa0953a360c",
+            "placeId": "ChIJYVk3aZrG2EcRDDY6laCvhmU"
+        },
+        {
+            "position": 5,
+            "title": "Temme English Estate Agents Basildon",
+            "address": "40 Southernhay, Basildon SS14 1ET, United Kingdom",
+            "latitude": 51.5701902,
+            "longitude": 0.46193069999999997,
+            "rating": 4.8,
+            "ratingCount": 186,
+            "type": "Real estate agency",
+            "types": [
+                "Real estate agency",
+                "Apartment rental agency",
+                "Estate appraiser"
+            ],
+            "website": "http://temmeenglish.co.uk/",
+            "phoneNumber": "+44 1268 207222",
+            "openingHours": {
+                "Saturday": "9 AM–4 PM",
+                "Sunday": "Closed",
+                "Monday": "9 AM–6 PM",
+                "Tuesday": "9 AM–6 PM",
+                "Wednesday": "9 AM–6 PM",
+                "Thursday": "9 AM–6 PM",
+                "Friday": "9 AM–6 PM"
+            },
+            "bookingLinks": [
+                "http://temmeenglish.co.uk/"
+            ],
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipPQpmEXDpsOfDwlr66BFgMUNcoi5ATToj6avDr9",
+            "cid": "9925623377100155148",
+            "fid": "0x47d8c7d3bd4fd5e3:0x89bee5df8e5e290c",
+            "placeId": "ChIJ49VPvdPH2EcRDClejt_lvok"
+        },
+        {
+            "position": 6,
+            "title": "Balgores Basildon Estate Agents & Letting Agents",
+            "address": "28 Southernhay, Basildon SS14 1EL, United Kingdom",
+            "latitude": 51.5710042,
+            "longitude": 0.46203809999999995,
+            "rating": 4.7,
+            "ratingCount": 462,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Mortgage broker",
+                "Real estate agency",
+                "Real estate rental agency"
+            ],
+            "website": "https://www.balgoresproperty.co.uk/branches/estate-agents-in-basildon/",
+            "phoneNumber": "+44 1268 271110",
+            "openingHours": {
+                "Saturday": "9 AM–3 PM",
+                "Sunday": "Closed",
+                "Monday": "9 AM–6 PM",
+                "Tuesday": "9 AM–6 PM",
+                "Wednesday": "9 AM–6 PM",
+                "Thursday": "9 AM–6 PM",
+                "Friday": "9 AM–6 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipMbNB8Y9VJHwxAK7pzgE52uSDsWHNK-0bbHOg97",
+            "cid": "10192697109801448322",
+            "fid": "0x47d8c69a15811083:0x8d73bc04a4ddb382",
+            "placeId": "ChIJgxCBFZrG2EcRgrPdpAS8c40"
+        },
+        {
+            "position": 7,
+            "title": "Gibson & Brennan Estate Agents",
+            "address": "Suite 4, Sharp House, Crompton Cl, Basildon SS14 3AY, United Kingdom",
+            "latitude": 51.580623599999996,
+            "longitude": 0.44972999999999996,
+            "rating": 4.9,
+            "ratingCount": 191,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent"
+            ],
+            "website": "http://www.gibsonandbrennan.co.uk/",
+            "phoneNumber": "+44 1268 219992",
+            "openingHours": {
+                "Saturday": "9 AM–5 PM",
+                "Sunday": "Closed",
+                "Monday": "8:30 AM–6 PM",
+                "Tuesday": "8:30 AM–6 PM",
+                "Wednesday": "8:30 AM–6 PM",
+                "Thursday": "8:30 AM–6 PM",
+                "Friday": "8:30 AM–6 PM"
+            },
+            "bookingLinks": [
+                "https://calendly.com/gibsonandbrennan"
+            ],
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipNqCg_7NDbhTsThsfwPI1JI0FtyIcCwmqnIBLYW",
+            "cid": "11324410556846426824",
+            "fid": "0x47d8c7a9f3f04783:0x9d286366f383cac8",
+            "placeId": "ChIJg0fw86nH2EcRyMqD82ZjKJ0"
+        },
+        {
+            "position": 8,
+            "title": "Bairstow Eves Sales and Letting Agents Basildon",
+            "address": "44 Southernhay, Basildon SS14 1ET, United Kingdom",
+            "latitude": 51.570345599999996,
+            "longitude": 0.4612107,
+            "rating": 4.8,
+            "ratingCount": 79,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Mortgage broker",
+                "Real estate agency"
+            ],
+            "website": "http://www.bairstoweves.co.uk/forsaleoffice/basildon/268/?referrer=GooglePlaces&utm_source=gmb&y_source=1_MzI1NzM2NC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+            "phoneNumber": "+44 1268 350348",
+            "openingHours": {
+                "Saturday": "9 AM–2 PM",
+                "Sunday": "Closed",
+                "Monday": "9 AM–5:30 PM",
+                "Tuesday": "9 AM–5:30 PM",
+                "Wednesday": "9 AM–5:30 PM",
+                "Thursday": "9 AM–5:30 PM",
+                "Friday": "9 AM–5:30 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipMeePu5S-tBLLIQtf-2L4AahHpWBF_KHUeiTIB-",
+            "cid": "1268539151232538302",
+            "fid": "0x47d8c7c9a51fbfed:0x119ac1a314e416be",
+            "placeId": "ChIJ7b8fpcnH2EcRvhbkFKPBmhE"
+        },
+        {
+            "position": 9,
+            "title": "Abbotts Sales and Letting Agents Basildon",
+            "address": "53 Southernhay, Basildon SS14 1EU, United Kingdom",
+            "latitude": 51.5705348,
+            "longitude": 0.4624664,
+            "rating": 4.5,
+            "ratingCount": 155,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Mortgage broker",
+                "Real estate agency"
+            ],
+            "website": "https://www.abbotts.co.uk/branch/estate-agents/basildon/?referrer=GooglePlaces&utm_source=yext&y_source=1_MzI1NzI3MS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+            "phoneNumber": "+44 1268 350069",
+            "openingHours": {
+                "Saturday": "9 AM–2 PM",
+                "Sunday": "Closed",
+                "Monday": "9 AM–5:30 PM",
+                "Tuesday": "9 AM–5:30 PM",
+                "Wednesday": "9 AM–5:30 PM",
+                "Thursday": "9 AM–5:30 PM",
+                "Friday": "9 AM–5:30 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipOkp7M3sqsIakiafzshi8b1ndd1ckBuUfntaC7q",
+            "cid": "5430150549365380503",
+            "fid": "0x47d8c7cecfca943f:0x4b5bc5278bd0d597",
+            "placeId": "ChIJP5TKz87H2EcRl9XQiyfFW0s"
+        },
+        {
+            "position": 10,
+            "title": "Carter Remy Estate Agents",
+            "address": "Cornwallis Business centre, Howard Chase, Basildon SS14 3BB, United Kingdom",
+            "latitude": 51.582085899999996,
+            "longitude": 0.4530607,
+            "rating": 4.9,
+            "ratingCount": 178,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Auction house",
+                "Real estate appraiser",
+                "Real estate consultant"
+            ],
+            "website": "http://www.carterremy.co.uk/",
+            "phoneNumber": "+44 1268 727757",
+            "openingHours": {
+                "Saturday": "9 AM–3 PM",
+                "Sunday": "Closed",
+                "Monday": "9 AM–6 PM",
+                "Tuesday": "9 AM–6 PM",
+                "Wednesday": "9 AM–6 PM",
+                "Thursday": "9 AM–6 PM",
+                "Friday": "9 AM–6 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzQsALVlYGP0T4lm8xMRPN64jF1cgrHYRRrxjMxTnm3MQfZ3norfmNoaAnyUH2U2Kex-z9wxi7gufeur8skG7v_JzJCN7zWw6NiKv-c4rbOA6XAT8k_ppevLtfUwv0A74rVFZkTsg",
+            "cid": "10665777577366861171",
+            "fid": "0x47d8c7a27e2addf1:0x9404743268473573",
+            "placeId": "ChIJ8d0qfqLH2EcRczVHaDJ0BJQ"
+        },
+        {
+            "position": 11,
+            "title": "Bear Estate Agents",
+            "address": "351 Clay Hill Rd, Basildon SS16 4HA, United Kingdom",
+            "latitude": 51.566016999999995,
+            "longitude": 0.4802649,
+            "rating": 4.6,
+            "ratingCount": 37,
+            "type": "Real estate agency",
+            "types": [
+                "Real estate agency"
+            ],
+            "website": "https://www.bearestateagents.co.uk/",
+            "phoneNumber": "+44 1268 661215",
+            "openingHours": {
+                "Saturday": "9 AM–5 PM",
+                "Sunday": "10 AM–4 PM",
+                "Monday": "9 AM–6 PM",
+                "Tuesday": "9 AM–6 PM",
+                "Wednesday": "9 AM–6 PM",
+                "Thursday": "9 AM–6 PM",
+                "Friday": "9 AM–6 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipOZUWxFjuyuTWi7L2Xm90BAd4E0rdVTk2wUwWh5",
+            "cid": "8418312782988890969",
+            "fid": "0x47d8c5ba2f38f571:0x74d3dadfbe2ed359",
+            "placeId": "ChIJcfU4L7rF2EcRWdMuvt_a03Q"
+        },
+        {
+            "position": 12,
+            "title": "Bairstow Eves Estate Agents Fryerns Basildon",
+            "address": "106 Whitmore Way, Fryerns, Basildon SS14 3JT, United Kingdom",
+            "latitude": 51.582242,
+            "longitude": 0.48687779999999997,
+            "rating": 4.3,
+            "ratingCount": 57,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Mortgage broker",
+                "Real estate agency"
+            ],
+            "website": "http://www.bairstoweves.co.uk/forsaleoffice/fryerns/279/?referrer=GooglePlaces&utm_source=gmb&y_source=1_MzI1NzMwNS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+            "phoneNumber": "+44 1268 350443",
+            "openingHours": {
+                "Saturday": "9 AM–2 PM",
+                "Sunday": "Closed",
+                "Monday": "9 AM–5:30 PM",
+                "Tuesday": "9 AM–5:30 PM",
+                "Wednesday": "9 AM–5:30 PM",
+                "Thursday": "9 AM–5:30 PM",
+                "Friday": "9 AM–5:30 PM"
+            },
+            "bookingLinks": [
+                "http://www.bairstoweves.co.uk/property-valuation/?utm_source=gmb"
+            ],
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipOTRjwX1gbkQGhgNO8SxWV5miDyokD96CHVjVlq",
+            "cid": "14006940446317824522",
+            "fid": "0x47d8c41748196a87:0xc262a61fbcd34a0a",
+            "placeId": "ChIJh2oZSBfE2EcRCkrTvB-mYsI"
+        },
+        {
+            "position": 13,
+            "title": "Lara Bradley Estate Agent",
+            "address": "London Rd, Pitsea, Basildon SS13 2EP, United Kingdom",
+            "latitude": 51.565155,
+            "longitude": 0.5110992999999999,
+            "rating": 5,
+            "ratingCount": 62,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent"
+            ],
+            "website": "https://iad.uk.com/real-estate-agent/lara.bradley",
+            "phoneNumber": "+44 7795 002226",
+            "openingHours": {
+                "Saturday": "Open 24 hours",
+                "Sunday": "Open 24 hours",
+                "Monday": "Open 24 hours",
+                "Tuesday": "Open 24 hours",
+                "Wednesday": "Open 24 hours",
+                "Thursday": "Open 24 hours",
+                "Friday": "Open 24 hours"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipMJBP-FeE7tqP21B6DsicDF67WiKyyV97-nqQFG",
+            "cid": "9271933975367448295",
+            "fid": "0x2e09a7bb34c83cfb:0x80ac86d366a6f6e7",
+            "placeId": "ChIJ-zzINLunCS4R5_amZtOGrIA"
+        },
+        {
+            "position": 14,
+            "title": "Griffin Residential Group",
+            "address": "4, The Parade, Pitsea, Basildon SS13 3BA, United Kingdom",
+            "latitude": 51.565213899999996,
+            "longitude": 0.5068910999999999,
+            "rating": 4.9,
+            "ratingCount": 71,
+            "type": "Real estate agency",
+            "types": [
+                "Real estate agency"
+            ],
+            "website": "http://www.griffingroup.co.uk/",
+            "phoneNumber": "+44 1268 498355",
+            "openingHours": {
+                "Saturday": "Closed",
+                "Sunday": "Closed",
+                "Monday": "9 AM–5 PM",
+                "Tuesday": "9 AM–5 PM",
+                "Wednesday": "9 AM–5 PM",
+                "Thursday": "9 AM–5 PM",
+                "Friday": "9 AM–5 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxJ35lilCreBB8hXqgD6EZtCQjh-6-vOJ9xxuRJeyxterwbQS5UzmrCcLy_hXbizgyGirTJJAo0Tp0sfpmqjDgw10Kx8C2m5mgcHuZJNkbWDWp-0Ti_Xg3J-y4MqCm4ne9tgE3L",
+            "cid": "16844677397065122634",
+            "fid": "0x47d8c5a022c76329:0xe9c450d8801e434a",
+            "placeId": "ChIJKWPHIqDF2EcRSkMegNhQxOk"
+        },
+        {
+            "position": 15,
+            "title": "Belvoir",
+            "address": "Unit 1 Office 1, The Capricorn Centre, Cranes Farm Rd, Basildon SS14 3JJ, United Kingdom",
+            "latitude": 51.5875199,
+            "longitude": 0.4939764,
+            "rating": 4.4,
+            "ratingCount": 71,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Apartment rental agency",
+                "Property management company",
+                "Real estate rental agency"
+            ],
+            "website": "http://www.belvoir.co.uk/letting-agents-basildon",
+            "phoneNumber": "+44 1268 411110",
+            "openingHours": {
+                "Saturday": "Closed",
+                "Sunday": "Closed",
+                "Monday": "9 AM–5:30 PM",
+                "Tuesday": "9 AM–5:30 PM",
+                "Wednesday": "9 AM–5:30 PM",
+                "Thursday": "9 AM–5:30 PM",
+                "Friday": "9 AM–4:30 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipNSlSpqsYyfsTIyGGEPQYi0wqRKsa8hR7eVeVZK",
+            "cid": "15317056251281024210",
+            "fid": "0x47d8c69a2cc189b1:0xd4911d81de4824d2",
+            "placeId": "ChIJsYnBLJrG2EcR0iRI3oEdkdQ"
+        },
+        {
+            "position": 16,
+            "title": "Hilbery Chaplin Laindon",
+            "address": "High Road Laindon, The Estate Office, Basildon SS15 6DQ, United Kingdom",
+            "latitude": 51.5835,
+            "longitude": 0.424151,
+            "rating": 4.6,
+            "ratingCount": 64,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Conveyancer",
+                "Mortgage broker",
+                "Property management company",
+                "Real estate appraiser",
+                "Real estate consultant",
+                "Real estate developer"
+            ],
+            "website": "https://www.hilberychaplin.co.uk/",
+            "phoneNumber": "+44 1268 416661",
+            "openingHours": {
+                "Saturday": "9 AM–5 PM",
+                "Sunday": "Closed",
+                "Monday": "9 AM–6 PM",
+                "Tuesday": "9 AM–6 PM",
+                "Wednesday": "9 AM–6 PM",
+                "Thursday": "9 AM–6 PM",
+                "Friday": "9 AM–6 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipMib5BYId2Y0Gut9C8YzzCzS4g92j1FRVUvzO88",
+            "cid": "9183295160305546670",
+            "fid": "0x47d8c71c2947cdad:0x7f719e4b099375ae",
+            "placeId": "ChIJrc1HKRzH2EcRrnWTCUuecX8"
+        },
+        {
+            "position": 17,
+            "title": "Pace Property Management and Lettings Ltd",
+            "address": "24 Station Ln, Pitsea, Basildon SS13 3BG, United Kingdom",
+            "latitude": 51.5643337,
+            "longitude": 0.5042261,
+            "rating": 4,
+            "ratingCount": 1,
+            "type": "Real estate agent",
+            "types": [
+                "Real estate agent",
+                "Property investment company",
+                "Property maintenance",
+                "Property management company",
+                "Real estate agency"
+            ],
+            "website": "https://www.pace-properties.com/",
+            "phoneNumber": "+44 1268 646256",
+            "openingHours": {
+                "Saturday": "9 AM–4:30 PM",
+                "Sunday": "Closed",
+                "Monday": "8 AM–7 PM",
+                "Tuesday": "8 AM–7 PM",
+                "Wednesday": "8 AM–7 PM",
+                "Thursday": "8 AM–7 PM",
+                "Friday": "8 AM–6 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipOgd6MbV1qJDiXYEdUQIRgzBdPeyoOVbulpBruv",
+            "cid": "2904342027523442511",
+            "fid": "0x47d8c44f056ac40b:0x284e4bafa8c5c74f",
+            "placeId": "ChIJC8RqBU_E2EcRT8fFqK9LTig"
+        },
+        {
+            "position": 18,
+            "title": "Gecko Estate Agents Ltd",
+            "address": "50 Nottingham Way, Langdon Hills, Basildon SS16 6TR, United Kingdom",
+            "latitude": 51.5685042,
+            "longitude": 0.4051536,
+            "rating": 5,
+            "ratingCount": 1,
+            "type": "Real estate agency",
+            "types": [
+                "Real estate agency"
+            ],
+            "website": "http://www.geckoproperty.co.uk/",
+            "phoneNumber": "+44 1268 426196",
+            "openingHours": {
+                "Saturday": "9 AM–5 PM",
+                "Sunday": "Closed",
+                "Monday": "9 AM–5:30 PM",
+                "Tuesday": "9 AM–5:30 PM",
+                "Wednesday": "9 AM–5:30 PM",
+                "Thursday": "9 AM–5:30 PM",
+                "Friday": "9 AM–5:30 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipM5czSbc-Ve_5V2OWJL0iEoDN0SxM_uIB4INgl2",
+            "cid": "8841615380741452744",
+            "fid": "0x47d8c7124355b219:0x7ab3ba5809b973c8",
+            "placeId": "ChIJGbJVQxLH2EcRyHO5CVi6s3o"
+        },
+        {
+            "position": 19,
+            "title": "Watson Fox & Co",
+            "address": "2 Chester Hall Ln, Basildon SS14 3BG, United Kingdom",
+            "latitude": 51.581494,
+            "longitude": 0.45527039999999996,
+            "rating": 5,
+            "ratingCount": 1,
+            "type": "Real estate rental agency",
+            "types": [
+                "Real estate rental agency",
+                "Apartment rental agency"
+            ],
+            "phoneNumber": "+44 1708 733699",
+            "openingHours": {
+                "Saturday": "8 AM–9 PM",
+                "Sunday": "8 AM–9 PM",
+                "Monday": "8 AM–9 PM",
+                "Tuesday": "8 AM–9 PM",
+                "Wednesday": "8 AM–9 PM",
+                "Thursday": "8 AM–9 PM",
+                "Friday": "8 AM–9 PM"
+            },
+            "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipM0WDIy7yFLuhdhsUzG_YZAL8EoPPD03JZGXeQk",
+            "cid": "4387331378244291939",
+            "fid": "0x47d8bb46896446c7:0x3ce2eea4b82d0d63",
+            "placeId": "ChIJx0ZkiUa72EcRYw0tuKTu4jw"
+        }
+    ],
+    "credits": 3
+}

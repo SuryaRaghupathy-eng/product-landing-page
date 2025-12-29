@@ -1,0 +1,114 @@
+import http.client
+import json
+from urllib.parse import urlparse
+
+# -----------------------------------------
+# SET THESE VALUES
+# -----------------------------------------
+
+API_KEY = "5d04b5d1186be87b1c50617f328cb56457c63171"
+
+KEYWORDS = [
+    "Estate Agents in Bedford",
+    "estate agents in aldershot",
+    "Estate Agents in Bournemouth"
+]
+
+GL = "gb"  # location
+TARGET_SITE = "belvoir.co.uk"   # domain only is enough
+MAX_PAGES = 5                   # how many SERP pages to scan
+# -----------------------------------------
+
+
+def normalize_domain(url):
+    """Extract domain from URL and normalize."""
+    if not url.startswith("http"):
+        url = "http://" + url
+    parsed = urlparse(url)
+    host = (parsed.hostname or "").lower()
+    if host.startswith("www."):
+        host = host[4:]
+    return host
+
+
+TARGET_DOMAIN = normalize_domain(TARGET_SITE)
+
+
+def domain_matches(result_link):
+    """Check if a search result belongs to the target domain."""
+    if not result_link:
+        return False
+    parsed = urlparse(result_link)
+    host = (parsed.hostname or "").lower()
+    if host.startswith("www."):
+        host = host[4:]
+    return host == TARGET_DOMAIN or host.endswith("." + TARGET_DOMAIN)
+
+
+def get_serp_page(keyword, gl, page):
+    """Send request to Serper.dev."""
+    conn = http.client.HTTPSConnection("google.serper.dev")
+    payload = json.dumps({
+        "q": keyword,
+        "gl": gl,
+        "page": page
+    })
+    headers = {
+        "X-API-KEY": API_KEY,
+        "Content-Type": "application/json"
+    }
+    conn.request("POST", "/search", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    return json.loads(data.decode("utf-8"))
+
+
+def track_keyword(keyword):
+    total_position_count = 0
+
+    for page in range(1, MAX_PAGES + 1):
+        data = get_serp_page(keyword, GL, page)
+        organic = data.get("organic", [])
+
+        for index, item in enumerate(organic):
+            total_position_count += 1
+            link = item.get("link", "")
+
+            if domain_matches(link):
+                position_on_page = index + 1
+                overall_position = total_position_count
+
+                return {
+                    "keyword": keyword,
+                    "found": True,
+                    "page": page,
+                    "position_on_page": position_on_page,
+                    "overall_position": overall_position
+                }
+
+    # Not found in scanned pages
+    return {
+        "keyword": keyword,
+        "found": False,
+        "page": None,
+        "position_on_page": None,
+        "overall_position": None
+    }
+
+
+# -----------------------------------------
+# RUN TRACKER
+# -----------------------------------------
+
+print("Tracking Started...\n")
+
+for keyword in KEYWORDS:
+    result = track_keyword(keyword)
+
+    if result["found"]:
+        print(f"Keyword: {result['keyword']}")
+        print(f"→ Found on page {result['page']} at position {result['position_on_page']}")
+        print(f"→ Overall position: {result['overall_position']}\n")
+    else:
+        print(f"Keyword: {result['keyword']}")
+        print("→ Not found in first", MAX_PAGES, "pages\n")

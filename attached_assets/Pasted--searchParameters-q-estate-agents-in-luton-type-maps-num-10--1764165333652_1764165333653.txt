@@ -1,0 +1,607 @@
+{
+  "searchParameters": {
+    "q": "estate agents in luton",
+    "type": "maps",
+    "num": 10,
+    "page": 1,
+    "ll": "51.711570°, -0.486753°",
+    "engine": "google"
+  },
+  "ll": "@51.8936468,-0.3146296,11z",
+  "places": [
+    {
+      "position": 1,
+      "title": "haart Estate and Lettings Agents Luton",
+      "address": "10-12 Wellington St, Bedfordshire LU1 2QH, United Kingdom",
+      "latitude": 51.8792596,
+      "longitude": -0.4179115,
+      "rating": 4.7,
+      "ratingCount": 1174,
+      "type": "Real estate agent",
+      "types": [
+        "Real estate agent",
+        "Property management company",
+        "Real estate appraiser",
+        "Real estate rental agency"
+      ],
+      "website": "https://www.haart.co.uk/branch-finder/luton-estate-agents/?utm_source=organic_gmb&utm_medium=organic&referrer=organic_gmb&y_source=1_MzQ0NjYwODgtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+      "phoneNumber": "+44 1582 249709",
+      "openingHours": {
+        "Wednesday": "8:30 AM–6 PM",
+        "Thursday": "8:30 AM–6 PM",
+        "Friday": "8:30 AM–6 PM",
+        "Saturday": "9 AM–5 PM",
+        "Sunday": "Closed",
+        "Monday": "8:30 AM–6 PM",
+        "Tuesday": "8:30 AM–6 PM"
+      },
+      "bookingLinks": [
+        "https://valuation.haart.co.uk/?utm_source=gmb&utm_medium=organic&utm_campaign=valuation&utm_term=appointment_Luton&utm_content=url&referrer=organic_gmb_valuation_url_appointment_Luton&y_source=1_MzQ0NjYwODgtNzE1LWxvY2F0aW9uLnJlc2VydmF0aW9uX3VybA%3D%3D"
+      ],
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipP2GJu1On-uyl9SxLRILSe356gvd5TpJTXk46Jl",
+      "cid": "16917742091355612355",
+      "fid": "0x4876485b4abfe92f:0xeac7e4cc4cece4c3",
+      "placeId": "ChIJL-m_SltIdkgRw-TsTMzkx-o"
+    },
+    {
+      "position": 2,
+      "title": "Penrose Estate Agents Luton",
+      "address": "386 Hitchin Rd, Luton LU2 7SR, United Kingdom",
+      "latitude": 51.891992599999995,
+      "longitude": -0.401101,
+      "rating": 4.7,
+      "ratingCount": 1140,
+      "type": "Real estate agency",
+      "types": [
+        "Real estate agency"
+      ],
+      "website": "http://www.penrose-ea.com/",
+      "phoneNumber": "+44 1582 280818",
+      "openingHours": {
+        "Wednesday": "9 AM–5:30 PM",
+        "Thursday": "9 AM–5:30 PM",
+        "Friday": "9 AM–5:30 PM",
+        "Saturday": "9 AM–4 PM",
+        "Sunday": "Closed",
+        "Monday": "9 AM–5:30 PM",
+        "Tuesday": "9 AM–5:30 PM"
+      },
+      "thumbnailUrl": "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzA4ObicUAHbn9jQsl4de3EbvELYwvuXLyFpqedHaN6Clk-D2IN0n3X3JF7m--dHQDGql_-4h0oKSF1Y3-Q7OqFOcbb_0QaG9Mur0n61lTwE5nwmdyYrIU6y3kCP6NPKYluMDF19AA1PSIj",
+      "cid": "5117356912392680204",
+      "fid": "0x487648435a4fcc21:0x470480ffb80e330c",
+      "placeId": "ChIJIcxPWkNIdkgRDDMOuP-ABEc"
+    },
+    {
+      "position": 3,
+      "title": "Leaders Letting Agents in Luton",
+      "address": "8 Wellington St, Luton LU1 2QH, United Kingdom",
+      "latitude": 51.879327599999996,
+      "longitude": -0.417813,
+      "rating": 4.5,
+      "ratingCount": 1068,
+      "type": "Real estate agency",
+      "types": [
+        "Real estate agency"
+      ],
+      "website": "https://www.leaders.co.uk/our-offices/bedfordshire/letting-agents-in-luton/?utm_source=localmaps&utm_medium=gbp&utm_campaign=gmb_luton",
+      "phoneNumber": "+44 1582 616263",
+      "openingHours": {
+        "Wednesday": "9 AM–5:30 PM",
+        "Thursday": "9 AM–5:30 PM",
+        "Friday": "9 AM–5:30 PM",
+        "Saturday": "9 AM–1 PM",
+        "Sunday": "Closed",
+        "Monday": "9 AM–5:30 PM",
+        "Tuesday": "9 AM–5:30 PM"
+      },
+      "bookingLinks": [
+        "https://www.leaders.co.uk/free-property-valuation/?utm_source=localmaps&utm_medium=gbp&utm_campaign=gmb_luton&utm_content=appointment"
+      ],
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipPM05dwnFBWknIejy7CfBrsDdQ_vxDjtPN1Njhn",
+      "cid": "5406674740661653516",
+      "fid": "0x4876485b3553abe7:0x4b085e07e537100c",
+      "placeId": "ChIJ56tTNVtIdkgRDBA35QdeCEs"
+    },
+    {
+      "position": 4,
+      "title": "Abbey Property",
+      "address": "289P, Dallow Rd, Luton LU1 1TF, United Kingdom",
+      "latitude": 51.883156899999996,
+      "longitude": -0.4425966,
+      "rating": 4.9,
+      "ratingCount": 3320,
+      "type": "Real estate agency",
+      "types": [
+        "Real estate agency",
+        "Property management company"
+      ],
+      "website": "http://www.abbeyproperty.com/",
+      "phoneNumber": "+44 1582 932505",
+      "openingHours": {
+        "Wednesday": "9 AM–6 PM",
+        "Thursday": "9 AM–6 PM",
+        "Friday": "9 AM–6 PM",
+        "Saturday": "10 AM–4 PM",
+        "Sunday": "Closed",
+        "Monday": "9 AM–6 PM",
+        "Tuesday": "9 AM–6 PM"
+      },
+      "bookingLinks": [
+        "https://www.abbeyproperty.com/nihal-mohammed/"
+      ],
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipMZG6eeG5tahb6R7tZUhzRObJyJdk-DcguyPm50",
+      "cid": "18244347348616579235",
+      "fid": "0x487648da32391b15:0xfd30f140392188a3",
+      "placeId": "ChIJFRs5MtpIdkgRo4ghOUDxMP0"
+    },
+    {
+      "position": 5,
+      "title": "Zenith Accommodation",
+      "address": "40 Bury Park Rd, Luton LU1 1HE, United Kingdom",
+      "latitude": 51.8855862,
+      "longitude": -0.4264943,
+      "rating": 4.8,
+      "ratingCount": 304,
+      "type": "Real estate agent",
+      "types": [
+        "Real estate agent",
+        "Apartment rental agency",
+        "Real estate agency"
+      ],
+      "website": "http://www.zenithaccom.co.uk/",
+      "phoneNumber": "+44 1582 343281",
+      "openingHours": {
+        "Wednesday": "9:30 AM–6 PM",
+        "Thursday": "9:30 AM–6 PM",
+        "Friday": "9:30 AM–6 PM",
+        "Saturday": "10 AM–2 PM",
+        "Sunday": "Closed",
+        "Monday": "9:30 AM–6 PM",
+        "Tuesday": "9:30 AM–6 PM"
+      },
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipNbKXeil_udf4Mrd-9nq_Gl0NCPDGh-W7NGnKWq",
+      "cid": "6245773773523706789",
+      "fid": "0x48764855bd054785:0x56ad7227ce54e3a5",
+      "placeId": "ChIJhUcFvVVIdkgRpeNUzidyrVY"
+    },
+    {
+      "position": 6,
+      "title": "Connells Estate Agents Luton",
+      "address": "83, 83A George St., Luton LU1 2AT, United Kingdom",
+      "latitude": 51.879548199999995,
+      "longitude": -0.41767489999999996,
+      "rating": 3.9,
+      "ratingCount": 289,
+      "type": "Real estate agent",
+      "types": [
+        "Real estate agent",
+        "Apartment rental agency",
+        "Mortgage lender",
+        "Property management company",
+        "Real estate agency",
+        "Real estate appraiser"
+      ],
+      "website": "https://www.connells.co.uk/estate-agents/luton?utm_source=Google&utm_medium=Main+URL&utm_campaign=Google+Knowledge+Panel&utm_id=YEXT&y_source=1_NjM5MTQ4MjktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+      "phoneNumber": "+44 1582 450999",
+      "openingHours": {
+        "Wednesday": "9 AM–5:30 PM",
+        "Thursday": "9 AM–5:30 PM",
+        "Friday": "9 AM–5:30 PM",
+        "Saturday": "9 AM–2 PM",
+        "Sunday": "Closed",
+        "Monday": "9 AM–5:30 PM",
+        "Tuesday": "9 AM–5:30 PM"
+      },
+      "bookingLinks": [
+        "https://www.connells.co.uk/pages/request_valuation?utm_source=Google&utm_medium=Request+Valuation&utm_campaign=Google+Knowledge+Panel&utm_id=YEXT&y_source=1_NjM5MTQ4MjktNzE1LWxvY2F0aW9uLnJlc2VydmF0aW9uX3VybA%3D%3D"
+      ],
+      "thumbnailUrl": "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw-DPGyg3_JuhWVWfzO8Nh3XCjdnOc0g89IMZUyEpO98xvUElsxbL7BPgbl41DcWLGn-qtDUdcEQIfnwZBO9Do6sXsb9HnV7gsQUyAtEXMQ58SYf2-bXzgJkle8B0IP6xrnGqjD",
+      "cid": "9081060600864199737",
+      "fid": "0x48764844cb797015:0x7e066880c24e5439",
+      "placeId": "ChIJFXB5y0RIdkgROVROwoBoBn4"
+    },
+    {
+      "position": 7,
+      "title": "Nova Estate Agents",
+      "address": "Suite 414, Jansel House, 648 Hitchin Rd, Stopsley, Luton LU2 7XH, United Kingdom",
+      "latitude": 51.9026843,
+      "longitude": -0.3948008,
+      "rating": 5,
+      "ratingCount": 94,
+      "type": "Real estate agency",
+      "types": [
+        "Real estate agency"
+      ],
+      "website": "http://nova-ea.com/",
+      "phoneNumber": "+44 1582 250111",
+      "openingHours": {
+        "Wednesday": "9 AM–5:30 PM",
+        "Thursday": "9 AM–5:30 PM",
+        "Friday": "9 AM–5:30 PM",
+        "Saturday": "9 AM–4 PM",
+        "Sunday": "Closed",
+        "Monday": "9 AM–5:30 PM",
+        "Tuesday": "9 AM–5:30 PM"
+      },
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipMi-WhSQXAF7ATK3FedyqIQayAOz0nVRVBN-26x",
+      "cid": "18290675605348764424",
+      "fid": "0x48764937a15af9a7:0xfdd5888e0eb74b08",
+      "placeId": "ChIJp_laoTdJdkgRCEu3Do6I1f0"
+    },
+    {
+      "position": 8,
+      "title": "Ideal Properties Ltd",
+      "address": "121 Dunstable Rd, Luton LU1 1BW, United Kingdom",
+      "latitude": 51.883325299999996,
+      "longitude": -0.42634829999999996,
+      "rating": 4.4,
+      "ratingCount": 195,
+      "type": "Real estate agent",
+      "types": [
+        "Real estate agent"
+      ],
+      "website": "https://idealpropertiesltd.com/",
+      "phoneNumber": "+44 1582 721110",
+      "openingHours": {
+        "Wednesday": "9 AM–6 PM",
+        "Thursday": "9 AM–6 PM",
+        "Friday": "9 AM–6 PM",
+        "Saturday": "10 AM–5 PM",
+        "Sunday": "Closed",
+        "Monday": "9 AM–6 PM",
+        "Tuesday": "9 AM–6 PM"
+      },
+      "bookingLinks": [
+        "https://idealpropertiesltd.com/?fbclid=PAAaYlmX_D2avmAb84Pr4JPqBR_bPkhfJqkFO_MG4uJAsc-5YObxDPjQC5n_g"
+      ],
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipPtMxhciWPAM5LnIoIq3exizTEvRishsRrkz-ip",
+      "cid": "17120468979566039985",
+      "fid": "0x487648577db402e3:0xed981fd42b20d3b1",
+      "placeId": "ChIJ4wK0fVdIdkgRsdMgK9QfmO0"
+    },
+    {
+      "position": 9,
+      "title": "Connells Estate Agents Luton North",
+      "address": "1A Riddy Ln, Luton LU3 2AD, United Kingdom",
+      "latitude": 51.906555399999995,
+      "longitude": -0.4240914,
+      "rating": 4.8,
+      "ratingCount": 76,
+      "type": "Real estate agent",
+      "types": [
+        "Real estate agent",
+        "Apartment rental agency",
+        "Mortgage lender",
+        "Property management company",
+        "Real estate agency",
+        "Real estate appraiser"
+      ],
+      "website": "https://www.connells.co.uk/estate-agents/luton-north?utm_source=Google&utm_medium=Main+URL&utm_campaign=Google+Knowledge+Panel&utm_id=YEXT&y_source=1_NjM5MTQ4MzAtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+      "phoneNumber": "+44 1582 592332",
+      "openingHours": {
+        "Wednesday": "9 AM–5:30 PM",
+        "Thursday": "9 AM–5:30 PM",
+        "Friday": "9 AM–5:30 PM",
+        "Saturday": "9 AM–2 PM",
+        "Sunday": "Closed",
+        "Monday": "9 AM–5:30 PM",
+        "Tuesday": "9 AM–5:30 PM"
+      },
+      "bookingLinks": [
+        "https://www.connells.co.uk/pages/request_valuation?utm_source=Google&utm_medium=Request+Valuation&utm_campaign=Google+Knowledge+Panel&utm_id=YEXT&y_source=1_NjM5MTQ4MzAtNzE1LWxvY2F0aW9uLnJlc2VydmF0aW9uX3VybA%3D%3D"
+      ],
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipM0bjZZ3yIEfRrmRBJQprhRzCRpKXtAaAoZAWFw",
+      "cid": "9685964271336796469",
+      "fid": "0x487649a67ef97af7:0x866b752fb427b135",
+      "placeId": "ChIJ93r5fqZJdkgRNbEntC91a4Y"
+    },
+    {
+      "position": 10,
+      "title": "Connells Estate Agents Stopsley, Luton",
+      "address": "Jansel House Parade 656, 656 Hitchin Rd, Luton LU2 7XH, United Kingdom",
+      "latitude": 51.9027216,
+      "longitude": -0.39485119999999996,
+      "rating": 4.6,
+      "ratingCount": 120,
+      "type": "Real estate agent",
+      "types": [
+        "Real estate agent",
+        "Apartment rental agency",
+        "Mortgage lender",
+        "Property management company",
+        "Real estate agency",
+        "Real estate appraiser"
+      ],
+      "website": "https://www.connells.co.uk/estate-agents/stopsley-luton?utm_source=Google&utm_medium=Main+URL&utm_campaign=Google+Knowledge+Panel&utm_id=YEXT&y_source=1_NjM5MTQ4NzMtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+      "phoneNumber": "+44 1582 737069",
+      "openingHours": {
+        "Wednesday": "9 AM–5:30 PM",
+        "Thursday": "9 AM–5:30 PM",
+        "Friday": "9 AM–5:30 PM",
+        "Saturday": "9 AM–2 PM",
+        "Sunday": "Closed",
+        "Monday": "9 AM–5:30 PM",
+        "Tuesday": "9 AM–5:30 PM"
+      },
+      "bookingLinks": [
+        "https://www.connells.co.uk/pages/request_valuation?utm_source=Google&utm_medium=Request+Valuation&utm_campaign=Google+Knowledge+Panel&utm_id=YEXT&y_source=1_NjM5MTQ4NzMtNzE1LWxvY2F0aW9uLnJlc2VydmF0aW9uX3VybA%3D%3D"
+      ],
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipPt29pxhSN-1dMaZ611PqSWaariJHVVtlZDYXI6",
+      "cid": "8063318874657592696",
+      "fid": "0x487649cfc68f656d:0x6fe6a9cb92ab1578",
+      "placeId": "ChIJbWWPxs9JdkgReBWrksup5m8"
+    },
+    {
+      "position": 11,
+      "title": "Esquire",
+      "address": "208 Marsh Rd, Luton LU3 2QW, United Kingdom",
+      "latitude": 51.9053135,
+      "longitude": -0.45428359999999995,
+      "rating": 4.9,
+      "ratingCount": 219,
+      "type": "Real estate agency",
+      "types": [
+        "Real estate agency"
+      ],
+      "openingHours": {
+        "Wednesday": "9 AM–5 PM",
+        "Thursday": "9 AM–5 PM",
+        "Friday": "9 AM–5 PM",
+        "Saturday": "10 AM–2 PM",
+        "Sunday": "Closed",
+        "Monday": "9 AM–5 PM",
+        "Tuesday": "9 AM–5 PM"
+      },
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipPKvv-QemT2H6WW028T-ipgV5RlEXkcV2ZOsTyD",
+      "cid": "1077794320594255899",
+      "fid": "0x4876496de90a3f45:0xef5183963f4401b",
+      "placeId": "ChIJRT8K6W1JdkgRG0D0YzkY9Q4"
+    },
+    {
+      "position": 12,
+      "title": "Opel Estates",
+      "address": "3 Gordon St, Luton LU1 2QP, United Kingdom",
+      "latitude": 51.880539,
+      "longitude": -0.4182566,
+      "rating": 4.8,
+      "ratingCount": 59,
+      "type": "Real estate agent",
+      "types": [
+        "Real estate agent",
+        "Property management company"
+      ],
+      "website": "http://www.opelestates.co.uk/",
+      "phoneNumber": "+44 1582 484888",
+      "openingHours": {
+        "Wednesday": "9:30 AM–5 PM",
+        "Thursday": "9:30 AM–5 PM",
+        "Friday": "9:30 AM–5 PM",
+        "Saturday": "10 AM–12 PM",
+        "Sunday": "Closed",
+        "Monday": "9:30 AM–5 PM",
+        "Tuesday": "9:30 AM–5 PM"
+      },
+      "thumbnailUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=qhujCgoZsbRFEhBNbhuT_w&cb_client=search.gws-prod.gps&w=80&h=92&yaw=192.1535&pitch=0&thumbfov=100",
+      "cid": "5304083379934207114",
+      "fid": "0x4876485b29c24571:0x499be3bb58081c8a",
+      "placeId": "ChIJcUXCKVtIdkgRihwIWLvjm0k"
+    },
+    {
+      "position": 13,
+      "title": "Promptmove",
+      "address": "243b Dunstable Rd, Luton LU4 8BW, United Kingdom",
+      "latitude": 51.8865821,
+      "longitude": -0.4319787,
+      "rating": 4.9,
+      "ratingCount": 557,
+      "type": "Real estate agency",
+      "types": [
+        "Real estate agency",
+        "Apartment rental agency",
+        "Commercial real estate agency",
+        "Real estate appraiser"
+      ],
+      "website": "http://promptmove.co.uk/",
+      "phoneNumber": "+44 1582 611040",
+      "openingHours": {
+        "Wednesday": "9:30 AM–6 PM",
+        "Thursday": "9:30 AM–6 PM",
+        "Friday": "9:30 AM–6 PM",
+        "Saturday": "10 AM–2 PM",
+        "Sunday": "Closed",
+        "Monday": "9:30 AM–6 PM",
+        "Tuesday": "9:30 AM–6 PM"
+      },
+      "bookingLinks": [
+        "https://www.promptmove.co.uk/contact-us/"
+      ],
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipOITf7ffvFTPzMCA2qEkwiVjWPXsNGTIluKZoZC",
+      "cid": "11084897089613808283",
+      "fid": "0x487648f902cefa25:0x99d5772c3631429b",
+      "placeId": "ChIJJfrOAvlIdkgRm0IxNix31Zk"
+    },
+    {
+      "position": 14,
+      "title": "My Estate",
+      "address": "68 Wellington St, Luton LU1 5AA, United Kingdom",
+      "latitude": 51.8780541,
+      "longitude": -0.4193381,
+      "rating": 4.3,
+      "ratingCount": 127,
+      "type": "Real estate agent",
+      "types": [
+        "Real estate agent"
+      ],
+      "website": "http://www.my-estate.co.uk/",
+      "phoneNumber": "+44 1582 380330",
+      "openingHours": {
+        "Wednesday": "9:30 AM–5:30 PM",
+        "Thursday": "9:30 AM–5:30 PM",
+        "Friday": "9:30 AM–5:30 PM",
+        "Saturday": "10 AM–4 PM",
+        "Sunday": "Closed",
+        "Monday": "9:30 AM–5:30 PM",
+        "Tuesday": "9:30 AM–5:30 PM"
+      },
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipNIYJM-0ZAOKJO3iHDWbUQvHF9XrozPYxvNPSBW",
+      "cid": "17000242149989847034",
+      "fid": "0x48764844ac043841:0xebecfe2a0dc48ffa",
+      "placeId": "ChIJQTgErERIdkgR-o_EDSr-7Os"
+    },
+    {
+      "position": 15,
+      "title": "haart Estate Agents Leagrave",
+      "address": "186 Marsh Rd, Bedfordshire LU3 2QL, United Kingdom",
+      "latitude": 51.904750299999996,
+      "longitude": -0.45318759999999997,
+      "rating": 4.9,
+      "ratingCount": 467,
+      "type": "Real estate agent",
+      "types": [
+        "Real estate agent",
+        "Property management company",
+        "Real estate appraiser"
+      ],
+      "website": "https://www.haart.co.uk/branch-finder/leagrave-estate-agents/?utm_source=organic_gmb&utm_medium=organic&referrer=organic_gmb&y_source=1_MzQ0NjYwNjctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+      "phoneNumber": "+44 1582 569020",
+      "openingHours": {
+        "Wednesday": "8:30 AM–6 PM",
+        "Thursday": "8:30 AM–6 PM",
+        "Friday": "8:30 AM–6 PM",
+        "Saturday": "9 AM–5 PM",
+        "Sunday": "Closed",
+        "Monday": "8:30 AM–6 PM",
+        "Tuesday": "8:30 AM–6 PM"
+      },
+      "bookingLinks": [
+        "https://valuation.haart.co.uk/?utm_source=gmb&utm_medium=organic&utm_campaign=valuation&utm_term=appointment_Leagrave&utm_content=url&referrer=organic_gmb_valuation_url_appointment_Leagrave&y_source=1_MzQ0NjYwNjctNzE1LWxvY2F0aW9uLnJlc2VydmF0aW9uX3VybA%3D%3D"
+      ],
+      "thumbnailUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=OMzcgsPfw-PucG706Wo9Rw&cb_client=search.gws-prod.gps&w=80&h=92&yaw=11.732539&pitch=0&thumbfov=100",
+      "cid": "687489580133585217",
+      "fid": "0x48764917f0f6cbaf:0x98a742172a51141",
+      "placeId": "ChIJr8v28BdJdkgRQRGlciF0igk"
+    },
+    {
+      "position": 16,
+      "title": "Taylors Estate Agents Luton",
+      "address": "27 George St., Luton LU1 2AF, United Kingdom",
+      "latitude": 51.878264599999994,
+      "longitude": -0.41506719999999997,
+      "rating": 4.1,
+      "ratingCount": 175,
+      "type": "Real estate agent",
+      "types": [
+        "Real estate agent",
+        "Mortgage broker",
+        "Real estate agency"
+      ],
+      "website": "https://www.taylorsestateagents.co.uk/branch/forsaleoffice/luton/1337/?referrer=GooglePlaces&utm_source=gmb&y_source=1_MzU2MDg4MS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+      "phoneNumber": "+44 1582 206316",
+      "openingHours": {
+        "Wednesday": "9 AM–5:30 PM",
+        "Thursday": "9 AM–5:30 PM",
+        "Friday": "9 AM–5:30 PM",
+        "Saturday": "9 AM–2 PM",
+        "Sunday": "Closed",
+        "Monday": "9 AM–5:30 PM",
+        "Tuesday": "9 AM–5:30 PM"
+      },
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipOWJ3mWEoOSI0iJjSy2btzakfeBTHiEJug0mRkY",
+      "cid": "10657557622012941402",
+      "fid": "0x4876484483bfc0c1:0x93e74030e956945a",
+      "placeId": "ChIJwcC_g0RIdkgRWpRW6TBA55M"
+    },
+    {
+      "position": 17,
+      "title": "Connells Estate Agents Leagrave, Luton",
+      "address": "185 Marsh Rd, Luton LU3 2QQ, United Kingdom",
+      "latitude": 51.904591599999996,
+      "longitude": -0.4535673,
+      "rating": 3.8,
+      "ratingCount": 72,
+      "type": "Real estate agent",
+      "types": [
+        "Real estate agent",
+        "Apartment rental agency",
+        "Mortgage lender",
+        "Property management company",
+        "Real estate agency",
+        "Real estate appraiser"
+      ],
+      "website": "https://www.connells.co.uk/estate-agents/leagrave-luton?utm_source=Google&utm_medium=Main+URL&utm_campaign=Google+Knowledge+Panel&utm_id=YEXT&y_source=1_NjM5MTQ4MjItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+      "phoneNumber": "+44 1582 595127",
+      "openingHours": {
+        "Wednesday": "9 AM–5:30 PM",
+        "Thursday": "9 AM–5:30 PM",
+        "Friday": "9 AM–5:30 PM",
+        "Saturday": "9 AM–2 PM",
+        "Sunday": "Closed",
+        "Monday": "9 AM–5:30 PM",
+        "Tuesday": "9 AM–5:30 PM"
+      },
+      "bookingLinks": [
+        "https://www.connells.co.uk/pages/request_valuation?utm_source=Google&utm_medium=Request+Valuation&utm_campaign=Google+Knowledge+Panel&utm_id=YEXT&y_source=1_NjM5MTQ4MjItNzE1LWxvY2F0aW9uLnJlc2VydmF0aW9uX3VybA%3D%3D"
+      ],
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipMwgm6P0Ynq6s_3Ie4A2TTt4WBk8K1R8cGUfFqR",
+      "cid": "9724589193479195011",
+      "fid": "0x48764917fa2249ef:0x86f4ae592fee0983",
+      "placeId": "ChIJ70ki-hdJdkgRgwnuL1mu9IY"
+    },
+    {
+      "position": 18,
+      "title": "Click That Property",
+      "address": "31 Park St W, Luton LU1 3BE, United Kingdom",
+      "latitude": 51.8768708,
+      "longitude": -0.41324829999999996,
+      "rating": 4.8,
+      "ratingCount": 204,
+      "type": "Real estate agency",
+      "types": [
+        "Real estate agency",
+        "Real estate rental agency"
+      ],
+      "website": "https://clickthatproperty.com/",
+      "phoneNumber": "+44 1582 729292",
+      "openingHours": {
+        "Wednesday": "9:30 AM–6 PM",
+        "Thursday": "9:30 AM–6 PM",
+        "Friday": "9:30 AM–6 PM",
+        "Saturday": "9:30 AM–4 PM",
+        "Sunday": "Closed",
+        "Monday": "9:30 AM–6 PM",
+        "Tuesday": "9:30 AM–6 PM"
+      },
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipOOQKVwWbG8gNtFKFGBAHk4XW6pBZVZKd19EESu",
+      "cid": "17888236152996985613",
+      "fid": "0x48764914dac1d161:0xf83fc80155af7b0d",
+      "placeId": "ChIJYdHB2hRJdkgRDXuvVQHIP_g"
+    },
+    {
+      "position": 19,
+      "title": "Belvoir!",
+      "address": "152 Marsh Rd, Luton LU3 2QL, United Kingdom",
+      "latitude": 51.903855899999996,
+      "longitude": -0.45220669999999996,
+      "rating": 4.8,
+      "ratingCount": 92,
+      "type": "Real estate agency",
+      "types": [
+        "Real estate agency"
+      ],
+      "website": "http://www.belvoir.co.uk/luton",
+      "phoneNumber": "+44 1582 345644",
+      "openingHours": {
+        "Wednesday": "9:30 AM–5 PM",
+        "Thursday": "9:30 AM–5 PM",
+        "Friday": "9:30 AM–5 PM",
+        "Saturday": "Closed",
+        "Sunday": "Closed",
+        "Monday": "9:30 AM–5 PM",
+        "Tuesday": "9:30 AM–5 PM"
+      },
+      "thumbnailUrl": "https://lh3.googleusercontent.com/p/AF1QipNwn-hbajjvCKktnwcaNNQHA4TEonrNmuepJSMl",
+      "cid": "1039584786422196468",
+      "fid": "0x4876491818a7d801:0xe6d58daf49868f4",
+      "placeId": "ChIJAdinGBhJdkgR9GiY9NpYbQ4"
+    }
+  ],
