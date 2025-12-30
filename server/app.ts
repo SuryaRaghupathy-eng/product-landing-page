@@ -8,6 +8,7 @@ import express, {
   NextFunction,
 } from "express";
 import session from "express-session";
+import cookieParser from "cookie-parser";
 
 declare module 'express-session' {
   interface SessionData {
@@ -34,6 +35,7 @@ export function log(message: string, source = "express") {
 export const app = express();
 
 app.set('trust proxy', true);
+app.use(cookieParser());
 
 const magicTokens = new Map<
   string,
@@ -55,27 +57,27 @@ const BLOCKED_DOMAINS = [
   "guerrillamail.com"
 ];
 
-const MAX_ATTEMPTS = 3;
-const WINDOW_MS = 60 * 60 * 1000; // 1 hour
+const MAX_ATTEMPTS_PER_DAY = 3;
+const DAY_MS = 24 * 60 * 60 * 1000;
 const TOKEN_TTL = 10 * 60 * 1000; // 10 minutes
 
 const BASE_URL =
   process.env.REPLIT_URL ||
   "https://aefcb2d2-f841-4d8c-a1d7-463bdfce8cf5-00-152qx0nryu6ax.riker.replit.dev";
 
-function checkRateLimit(ip: string): boolean {
+function checkRateLimit(key: string): boolean {
   const now = Date.now();
-  const record = loginAttempts.get(ip);
+  const record = loginAttempts.get(key);
 
   if (!record || now > record.resetAt) {
-    loginAttempts.set(ip, {
+    loginAttempts.set(key, {
       count: 1,
-      resetAt: now + WINDOW_MS
+      resetAt: now + DAY_MS
     });
     return true;
   }
 
-  if (record.count >= MAX_ATTEMPTS) {
+  if (record.count >= MAX_ATTEMPTS_PER_DAY) {
     return false;
   }
 
@@ -180,6 +182,14 @@ export default async function runApp(
 ) {
   // Login routes
   app.get("/login", (req, res) => {
+    if (!req.cookies?.deviceId) {
+      const deviceId = crypto.randomUUID();
+      res.cookie("deviceId", deviceId, {
+        httpOnly: true,
+        maxAge: 365 * 24 * 60 * 60 * 1000 // 1 year
+      });
+    }
+
     res.send(`
     <!DOCTYPE html>
     <html>
@@ -204,10 +214,12 @@ export default async function runApp(
 
   app.post("/login", (req, res) => {
     const email = String(req.body.email || "").toLowerCase();
-    const ip = req.ip || "unknown";
+    const deviceId = req.cookies?.deviceId || "unknown-device";
 
-    if (!checkRateLimit(ip)) {
-      return res.send("Too many login attempts. Try again later.");
+    if (!checkRateLimit(deviceId)) {
+      return res.send(
+        "You have reached the maximum of 3 login attempts for today. Please try again tomorrow."
+      );
     }
 
     if (!email || !email.includes("@")) {

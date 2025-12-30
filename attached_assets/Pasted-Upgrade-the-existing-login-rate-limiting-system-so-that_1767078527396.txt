@@ -1,0 +1,167 @@
+Upgrade the existing login rate-limiting system so that each physical device is limited to 3 login attempts per 24 hours, even across different browsers on the same system. This must work on Replit Free, without a database, OAuth, CAPTCHA, or autonomous agents.
+
+Constraints
+
+Replit Free tier only
+
+No database
+
+No OAuth
+
+No CAPTCHA
+
+No refactoring existing auth, magic-link, or credit logic
+
+Extend the existing rate-limiting logic only
+
+Steps to perform
+1. Ensure cookie parsing is enabled
+
+Install dependency:
+
+npm install cookie-parser
+
+
+Add import in server/app.ts:
+
+import cookieParser from "cookie-parser";
+
+
+Register middleware before routes:
+
+app.use(cookieParser());
+
+2. Generate a persistent device ID cookie on /login GET
+
+Modify the existing /login GET route:
+
+import crypto from "crypto";
+
+app.get("/login", (req, res) => {
+  if (!req.cookies?.deviceId) {
+    const deviceId = crypto.randomUUID();
+    res.cookie("deviceId", deviceId, {
+      httpOnly: true,
+      maxAge: 365 * 24 * 60 * 60 * 1000 // 1 year
+    });
+  }
+
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+      <head><title>Login</title></head>
+      <body>
+        <h2>Email Login</h2>
+        <form method="POST" action="/login">
+          <input type="email" name="email" required />
+          <button type="submit">Send login link</button>
+        </form>
+      </body>
+    </html>
+  `);
+});
+
+3. Update rate-limit configuration to per-day
+
+Near the top of server/app.ts, define:
+
+const MAX_ATTEMPTS_PER_DAY = 3;
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+
+Update your in-memory rate-limit store to track daily windows:
+
+const loginAttempts = new Map<
+  string,
+  { count: number; resetAt: number }
+>();
+
+
+Replace (or update) your checkRateLimit helper:
+
+function checkRateLimit(key: string): boolean {
+  const now = Date.now();
+  const record = loginAttempts.get(key);
+
+  if (!record || now > record.resetAt) {
+    loginAttempts.set(key, {
+      count: 1,
+      resetAt: now + DAY_MS
+    });
+    return true;
+  }
+
+  if (record.count >= MAX_ATTEMPTS_PER_DAY) {
+    return false;
+  }
+
+  record.count += 1;
+  return true;
+}
+
+4. Enforce device-based daily limit in /login POST
+
+Update the existing /login POST route:
+
+app.post("/login", (req, res) => {
+  const email = String(req.body.email || "").toLowerCase();
+  const deviceId = req.cookies?.deviceId || "unknown-device";
+
+  if (!checkRateLimit(deviceId)) {
+    return res.send(
+      "You have reached the maximum of 3 login attempts for today. Please try again tomorrow."
+    );
+  }
+
+  // existing email validation
+  // existing disposable email blocking
+  // existing magic token generation
+  // existing console log of magic link
+});
+
+
+⚠️ Do NOT modify:
+
+Magic-link token logic
+
+Session logic
+
+Credit logic
+
+Landing page UI
+
+Tool logic
+
+Expected Result
+
+✅ Only 3 login attempts per device per day
+
+✅ Same system, different browsers → blocked
+
+✅ Limit resets automatically after 24 hours
+
+✅ Normal users unaffected
+
+✅ Fully compatible with Replit Free
+
+Security Reality (Accepted & Normal)
+
+Clearing cookies or using VPN can reset limits
+
+This is industry-standard behavior
+
+Stronger enforcement requires CAPTCHA or phone verification (not required now)
+
+Outcome
+
+You now have:
+
+Low-friction UX
+
+Strong abuse protection
+
+Protected credits
+
+SaaS-standard login limits
+
+Zero paid infrastructure
