@@ -6,6 +6,7 @@ import express, {
   Response,
   NextFunction,
 } from "express";
+import session from "express-session";
 
 import { registerRoutes } from "./routes";
 
@@ -33,6 +34,20 @@ app.use(express.json({
   }
 }));
 app.use(express.urlencoded({ extended: false }));
+
+app.use(
+  session({
+    name: "magic_session",
+    secret: process.env.SESSION_SECRET || "dev-secret",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      secure: false,
+      maxAge: 7 * 24 * 60 * 60 * 1000
+    }
+  })
+);
 
 app.use((req, res, next) => {
   const start = Date.now();
