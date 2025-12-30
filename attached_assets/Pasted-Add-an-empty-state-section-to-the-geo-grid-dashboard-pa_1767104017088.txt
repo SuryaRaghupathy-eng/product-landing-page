@@ -1,3 +1,35 @@
+Add an empty state section to the /geo-grid-dashboard page to handle first-time users with no projects.
+
+Environment:
+
+TypeScript + React
+
+Wouter for routing
+
+Shadcn UI components
+
+Requirements:
+
+Modify geo-grid-dashboard.tsx
+
+Add the empty state below the existing header
+
+Do NOT add backend logic
+
+Do NOT add persistence
+
+Do NOT modify /analyze
+
+The empty state must include:
+
+A title: No projects yet
+
+A short description encouraging project creation
+
+A Create Campaign button that navigates to /analyze
+
+Use the following implementation:
+
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
@@ -39,3 +71,23 @@ export default function GeoGridDashboard() {
     </div>
   );
 }
+
+
+Do not add any conditional logic yet.
+The empty state should always be visible for now.
+
+✅ EXPECTED RESULT (VERIFY)
+
+/geo-grid-dashboard shows:
+
+Projects header
+
+Subtitle
+
++ New Project button (top-right)
+
+Empty state card below
+
+Clicking Create Campaign or + New Project opens /analyze
+
+No backend or wizard changes
