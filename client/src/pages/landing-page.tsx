@@ -97,27 +97,36 @@ export default function LandingPage() {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8 relative">
             <a href="#features" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Features</a>
             <a href="#process" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">How it Works</a>
             <a href="#pricing" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Pricing</a>
-            <Link href="/">
+            <div className="relative">
               <Button id="account-btn" variant="ghost" className="text-sm font-medium flex items-center gap-2">
                 <img src={accountIconPath} alt="Account" className="w-5 h-5 rounded-full" />
                 My Account
               </Button>
-            </Link>
 
-            <div id="account-dropdown" hidden>
-              <div id="account-email"></div>
-              <div id="account-plan"></div>
-              <div id="account-credits"></div>
+              <div
+                id="account-dropdown"
+                hidden
+                className="absolute right-0 mt-1 w-56 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-lg z-50"
+              >
+                <div className="p-4 space-y-2">
+                  <div id="account-email" className="text-sm font-medium text-slate-900 dark:text-white truncate"></div>
+                  <div id="account-plan" className="text-xs text-slate-600 dark:text-slate-400"></div>
+                  <div id="account-credits" className="text-xs text-slate-600 dark:text-slate-400"></div>
+                </div>
 
-              <hr />
+                <div className="border-t border-slate-200 dark:border-slate-700" />
 
-              <button id="logout-btn">
-                Logout
-              </button>
+                <button
+                  id="logout-btn"
+                  className="w-full px-4 py-2 text-left text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-b-lg"
+                >
+                  Logout
+                </button>
+              </div>
             </div>
 
             <Link href="/analyze">
