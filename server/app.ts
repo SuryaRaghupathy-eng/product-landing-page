@@ -118,7 +118,7 @@ async function sendMagicLinkEmail(email: string, link: string) {
 }
 
 function requireCredits(req: Request, res: Response, next: NextFunction) {
-  const user = req.session.user;
+  const user = (req.session as any).user;
   if (!user) {
     if (req.path.startsWith('/api/')) {
       return res.status(401).json({ error: "Unauthorized" });
@@ -308,7 +308,7 @@ export default async function runApp(
   });
 
   app.get("/api/credits", (req, res) => {
-    const user = req.session.user;
+    const user = (req.session as any).user;
     if (!user) return res.status(401).json({ error: "Unauthorized" });
 
     ensureCredits(user.userId);

@@ -1,4 +1,4 @@
-import express, { type Express, Request } from "express";
+import express, { type Express, Request, Response, NextFunction } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { coordinateSchema, insertFavoriteSchema } from "@shared/schema";
@@ -428,7 +428,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.post("/api/grid-search", requireCreditsMiddleware, async (req: Request, res: Response) => {
     try {
-      const userCredits = (app as any).userCredits;
+      const userCredits = (app as any).userCredits as Map<string, number>;
       
       const user = (req as any).session.user;
       if (!user) return res.status(401).json({ error: "Unauthorized" });
