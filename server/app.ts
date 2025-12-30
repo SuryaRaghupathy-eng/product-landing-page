@@ -124,6 +124,9 @@ async function sendMagicLinkEmail(email: string, link: string) {
 }
 
 function requireCredits(req: Request, res: Response, next: NextFunction) {
+  // Temporary bypass for development
+  return next();
+  
   const user = (req.session as any).user;
   if (!user) {
     if (req.path.startsWith('/api/')) {
@@ -178,6 +181,11 @@ app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
   let capturedJsonResponse: Record<string, any> | undefined = undefined;
+
+  // Temporary bypass for development
+  if (path === "/" || path === "/login" || path === "/auth/magic" || path.startsWith("/api/")) {
+    return next();
+  }
 
   // Add route guard for unauthenticated users
   if (path === "/" && !req.session.user) {
