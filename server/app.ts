@@ -97,24 +97,20 @@ function ensureCredits(userId: string) {
 }
 
 async function sendMagicLinkEmail(email: string, link: string) {
-  try {
-    await resend.emails.send({
-      from: "Login <onboarding@resend.dev>",
-      to: email,
-      subject: "Your secure login link",
-      html: `
-        <p>Click the link below to log in:</p>
-        <p><a href="${link}">${link}</a></p>
-        <p>This link expires in 10 minutes.</p>
-      `
-    });
-  } catch (error) {
-    console.error("Failed to send magic link email:", error);
-    // Fallback to console log in dev if sending fails
-    if (process.env.NODE_ENV !== "production") {
-      console.log("Magic login link (fallback):", link);
-    }
+  if (!process.env.RESEND_API_KEY) {
+    throw new Error("RESEND_API_KEY is missing");
   }
+
+  await resend.emails.send({
+    from: "Login <onboarding@resend.dev>",
+    to: email,
+    subject: "Your secure login link",
+    html: `
+      <p>Click the link below to log in:</p>
+      <p><a href="${link}">${link}</a></p>
+      <p>This link expires in 10 minutes.</p>
+    `
+  });
 }
 
 function requireCredits(req: Request, res: Response, next: NextFunction) {
@@ -266,14 +262,10 @@ export default async function runApp(
 
     const magicLink = `${APP_BASE_URL}/auth/magic?token=${token}`;
 
-    if (process.env.NODE_ENV === "production" || process.env.RESEND_API_KEY) {
-      await sendMagicLinkEmail(email, magicLink);
-    } else {
-      console.log("Magic login link:", magicLink);
-    }
+    await sendMagicLinkEmail(email, magicLink);
 
     res.send(
-      "Login link generated. Check your email (or server console in dev) for the magic link."
+      "Login link generated. Check your email for the magic link."
     );
   });
 

@@ -1,0 +1,114 @@
+Ensure that magic-link emails are always sent using Resend, even in development mode on Replit Free. Remove any dev/prod condition that prevents email delivery.
+
+Steps to perform
+1. Verify Resend dependency (skip if already installed)
+npm install resend
+
+2. Add Resend setup (top of server/app.ts)
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+3. Add (or replace) the email helper function
+
+Paste this once, outside all routes:
+
+async function sendMagicLinkEmail(email: string, link: string) {
+  if (!process.env.RESEND_API_KEY) {
+    throw new Error("RESEND_API_KEY is missing");
+  }
+
+  await resend.emails.send({
+    from: "Login <onboarding@resend.dev>",
+    to: email,
+    subject: "Your secure login link",
+    html: `
+      <p>Click the link below to log in:</p>
+      <p><a href="${link}">${link}</a></p>
+      <p>This link expires in 10 minutes.</p>
+    `
+  });
+}
+
+4. REMOVE any dev/prod conditional logic
+
+❌ REMOVE this if it exists anywhere:
+
+if (process.env.NODE_ENV === "production") {
+  ...
+} else {
+  console.log(...)
+}
+
+5. Update /login POST route to ALWAYS send email
+
+Inside your existing /login POST handler, ensure it does this:
+
+const magicLink = `${APP_BASE_URL}/auth/magic?token=${token}`;
+
+await sendMagicLinkEmail(email, magicLink);
+
+res.send(
+  "Login link generated. Check your email for the magic link."
+);
+
+
+⚠️ Do NOT:
+
+Comment this out
+
+Wrap it in NODE_ENV checks
+
+Replace it with console.log
+
+6. (Temporary debug — OPTIONAL but recommended)
+
+Add this once to confirm the secret is loaded:
+
+console.log("RESEND_API_KEY loaded:", !!process.env.RESEND_API_KEY);
+
+
+Expected output:
+
+RESEND_API_KEY loaded: true
+
+
+Remove after confirmation.
+
+7. Restart the Replit app
+
+This is mandatory after adding Secrets.
+
+Expected Result
+
+Submitting /login sends a real email
+
+Email arrives from onboarding@resend.dev
+
+Magic link uses APP_BASE_URL
+
+Clicking the link logs the user in
+
+Works fully on Replit Free
+
+Notes (Important)
+
+First email may go to Spam → mark as “Not Spam”
+
+Do NOT change sender email yet
+
+No custom domain required
+
+No phone number required
+
+Outcome
+
+You now have:
+
+✅ Real email-based magic-link login
+
+✅ Works in development
+
+✅ No paid Replit features
+
+✅ Production-ready auth transport
