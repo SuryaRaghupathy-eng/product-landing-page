@@ -11,7 +11,7 @@ import session from "express-session";
 import cookieParser from "cookie-parser";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 declare module 'express-session' {
   interface SessionData {
@@ -97,8 +97,9 @@ function ensureCredits(userId: string) {
 }
 
 async function sendMagicLinkEmail(email: string, link: string) {
-  if (!process.env.RESEND_API_KEY) {
-    throw new Error("RESEND_API_KEY is missing");
+  if (!resend) {
+    console.log("RESEND_API_KEY not set - magic link:", link);
+    return;
   }
 
   try {
