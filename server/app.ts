@@ -59,6 +59,10 @@ const MAX_ATTEMPTS = 3;
 const WINDOW_MS = 60 * 60 * 1000; // 1 hour
 const TOKEN_TTL = 10 * 60 * 1000; // 10 minutes
 
+const BASE_URL =
+  process.env.REPLIT_URL ||
+  "https://aefcb2d2-f841-4d8c-a1d7-463bdfce8cf5-00-152qx0nryu6ax.riker.replit.dev";
+
 function checkRateLimit(ip: string): boolean {
   const now = Date.now();
   const record = loginAttempts.get(ip);
@@ -222,9 +226,7 @@ export default async function runApp(
       expiresAt: Date.now() + TOKEN_TTL
     });
 
-    const baseUrl =
-      process.env.REPLIT_URL ||
-      `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.replit.dev`;
+    const baseUrl = BASE_URL;
 
     console.log(
       `Magic login link for ${email}: ${baseUrl}/auth/magic?token=${token}`
