@@ -195,6 +195,34 @@ export default async function runApp(
     );
   });
 
+  app.get("/auth/magic", (req, res) => {
+    const token = String(req.query.token || "");
+    const record = magicTokens.get(token);
+
+    if (!record) {
+      return res.send("Invalid or already used login link");
+    }
+
+    if (record.expiresAt < Date.now()) {
+      magicTokens.delete(token);
+      return res.send("Login link has expired");
+    }
+
+    const userId = crypto
+      .createHash("sha256")
+      .update(record.email)
+      .digest("hex");
+
+    req.session.user = {
+      userId,
+      email: record.email
+    };
+
+    magicTokens.delete(token);
+
+    res.redirect("/");
+  });
+
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
