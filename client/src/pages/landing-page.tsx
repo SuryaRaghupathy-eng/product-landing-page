@@ -45,6 +45,19 @@ export default function LandingPage() {
                 My Account
               </Button>
             </Link>
+
+            <div id="account-dropdown" hidden>
+              <div id="account-email"></div>
+              <div id="account-plan"></div>
+              <div id="account-credits"></div>
+
+              <hr />
+
+              <button id="logout-btn">
+                Logout
+              </button>
+            </div>
+
             <Link href="/analyze">
               <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6">
                 Start Free Analysis
