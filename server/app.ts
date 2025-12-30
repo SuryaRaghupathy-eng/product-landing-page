@@ -9,6 +9,9 @@ import express, {
 } from "express";
 import session from "express-session";
 import cookieParser from "cookie-parser";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 declare module 'express-session' {
   interface SessionData {
@@ -88,6 +91,27 @@ function checkRateLimit(key: string): boolean {
 function ensureCredits(userId: string) {
   if (!userCredits.has(userId)) {
     userCredits.set(userId, FREE_CREDITS);
+  }
+}
+
+async function sendMagicLinkEmail(email: string, link: string) {
+  try {
+    await resend.emails.send({
+      from: "Login <onboarding@resend.dev>",
+      to: email,
+      subject: "Your secure login link",
+      html: `
+        <p>Click the link below to log in:</p>
+        <p><a href="${link}">${link}</a></p>
+        <p>This link expires in 10 minutes.</p>
+      `
+    });
+  } catch (error) {
+    console.error("Failed to send magic link email:", error);
+    // Fallback to console log in dev if sending fails
+    if (process.env.NODE_ENV !== "production") {
+      console.log("Magic login link (fallback):", link);
+    }
   }
 }
 
@@ -212,7 +236,7 @@ export default async function runApp(
   `);
   });
 
-  app.post("/login", (req, res) => {
+  app.post("/login", async (req, res) => {
     const email = String(req.body.email || "").toLowerCase();
     const deviceId = req.cookies?.deviceId || "unknown-device";
 
@@ -239,13 +263,16 @@ export default async function runApp(
     });
 
     const baseUrl = BASE_URL;
+    const magicLink = `${baseUrl}/auth/magic?token=${token}`;
 
-    console.log(
-      `Magic login link for ${email}: ${baseUrl}/auth/magic?token=${token}`
-    );
+    if (process.env.NODE_ENV === "production" || process.env.RESEND_API_KEY) {
+      await sendMagicLinkEmail(email, magicLink);
+    } else {
+      console.log("Magic login link:", magicLink);
+    }
 
     res.send(
-      "Login link generated. Check server console for the magic link."
+      "Login link generated. Check your email (or server console in dev) for the magic link."
     );
   });
 
