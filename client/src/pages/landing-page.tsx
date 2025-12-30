@@ -15,7 +15,7 @@ import {
   Star
 } from "lucide-react";
 import { useState } from "react";
-import accountIconPath from "@assets/image_1767095925040.png";
+import accountIconPath from "@assets/generated_images/minimalist_account_icon_with_user_silhouette.png";
 
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
