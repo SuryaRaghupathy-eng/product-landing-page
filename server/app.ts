@@ -262,7 +262,14 @@ export default async function runApp(
 
     const magicLink = `${APP_BASE_URL}/auth/magic?token=${token}`;
 
+    // ✅ Send real email
     await sendMagicLinkEmail(email, magicLink);
+
+    // ✅ Optional console logging (dev/debug only)
+    if (process.env.LOG_MAGIC_LINK === "true") {
+      console.log("🔐 Magic login link sent:");
+      console.log(magicLink);
+    }
 
     res.send(
       "Login link generated. Check your email for the magic link."

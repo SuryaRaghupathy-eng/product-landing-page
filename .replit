@@ -47,3 +47,8 @@ waitForPort = 5000
 
 [agent]
 expertMode = true
+
+[userenv]
+
+[userenv.shared]
+LOG_MAGIC_LINK = "true"
