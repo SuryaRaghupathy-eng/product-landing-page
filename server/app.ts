@@ -8,6 +8,12 @@ import express, {
 } from "express";
 import session from "express-session";
 
+declare module 'express-session' {
+  interface SessionData {
+    user: any;
+  }
+}
+
 import { registerRoutes } from "./routes";
 
 export function log(message: string, source = "express") {
@@ -54,6 +60,11 @@ app.use((req, res, next) => {
   const path = req.path;
   let capturedJsonResponse: Record<string, any> | undefined = undefined;
 
+  // Add route guard for unauthenticated users
+  if (path === "/" && !req.session.user) {
+    return res.redirect("/login");
+  }
+
   const originalResJson = res.json;
   res.json = function (bodyJson, ...args) {
     capturedJsonResponse = bodyJson;
@@ -82,6 +93,42 @@ app.use((req, res, next) => {
 export default async function runApp(
   setup: (app: Express, server: Server) => Promise<void>,
 ) {
+  // Login routes
+  app.get("/login", (req, res) => {
+    res.send(`
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Login</title>
+      </head>
+      <body>
+        <h2>Email Login</h2>
+        <form method="POST" action="/login">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Send login link</button>
+        </form>
+      </body>
+    </html>
+  `);
+  });
+
+  app.post("/login", (req, res) => {
+    const email = String(req.body.email || "").toLowerCase();
+
+    if (!email || !email.includes("@")) {
+      return res.send("Invalid email address");
+    }
+
+    res.send(
+      "Login request received. Magic link generation will be added in the next phase."
+    );
+  });
+
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
