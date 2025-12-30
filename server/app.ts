@@ -101,16 +101,25 @@ async function sendMagicLinkEmail(email: string, link: string) {
     throw new Error("RESEND_API_KEY is missing");
   }
 
-  await resend.emails.send({
-    from: "Login <onboarding@resend.dev>",
-    to: email,
-    subject: "Your secure login link",
-    html: `
-      <p>Click the link below to log in:</p>
-      <p><a href="${link}">${link}</a></p>
-      <p>This link expires in 10 minutes.</p>
-    `
-  });
+  try {
+    const data = await resend.emails.send({
+      from: "Login <onboarding@resend.dev>",
+      to: email,
+      subject: "Your secure login link",
+      html: `
+        <p>Click the link below to log in:</p>
+        <p><a href="${link}">${link}</a></p>
+        <p>This link expires in 10 minutes.</p>
+      `
+    });
+    console.log("Email API response:", JSON.stringify(data));
+  } catch (error: any) {
+    console.error("Resend API error:", error);
+    if (error.response) {
+      console.error("Resend Error Response:", JSON.stringify(error.response.data));
+    }
+    throw error;
+  }
 }
 
 function requireCredits(req: Request, res: Response, next: NextFunction) {
