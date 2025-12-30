@@ -223,7 +223,8 @@ export default async function runApp(
     });
 
     const baseUrl =
-      process.env.REPLIT_URL || "http://localhost:5000";
+      process.env.REPLIT_URL ||
+      `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.replit.dev`;
 
     console.log(
       `Magic login link for ${email}: ${baseUrl}/auth/magic?token=${token}`
