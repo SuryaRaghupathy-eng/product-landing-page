@@ -63,8 +63,22 @@ export default function LandingPage() {
 
     accountBtn.addEventListener("click", handleClick);
 
+    const logoutBtn = document.getElementById(
+      "logout-btn"
+    ) as HTMLButtonElement | null;
+
+    const handleLogout = async () => {
+      await fetch("/logout", { method: "POST" });
+      window.location.href = "/login";
+    };
+
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", handleLogout);
+    }
+
     return () => {
       accountBtn.removeEventListener("click", handleClick);
+      logoutBtn?.removeEventListener("click", handleLogout);
     };
   }, []);
 
