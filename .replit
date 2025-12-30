@@ -52,3 +52,4 @@ expertMode = true
 
 [userenv.shared]
 LOG_MAGIC_LINK = "true"
+APP_BASE_URL = "https://78126f29-2a30-4d4a-b262-68527e0366c1-00-2gmeaszd1gz3t.kirk.replit.dev"
