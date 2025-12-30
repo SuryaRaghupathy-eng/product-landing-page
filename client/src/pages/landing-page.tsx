@@ -40,7 +40,7 @@ export default function LandingPage() {
             <a href="#process" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">How it Works</a>
             <a href="#pricing" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Pricing</a>
             <Link href="/">
-              <Button variant="ghost" className="text-sm font-medium flex items-center gap-2">
+              <Button id="account-btn" variant="ghost" className="text-sm font-medium flex items-center gap-2">
                 <img src={accountIconPath} alt="Account" className="w-5 h-5 rounded-full" />
                 My Account
               </Button>
