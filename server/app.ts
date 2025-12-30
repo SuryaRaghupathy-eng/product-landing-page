@@ -11,7 +11,10 @@ import session from "express-session";
 
 declare module 'express-session' {
   interface SessionData {
-    user: any;
+    user: {
+      userId: string;
+      email: string;
+    };
   }
 }
 
@@ -30,6 +33,8 @@ export function log(message: string, source = "express") {
 
 export const app = express();
 
+app.set('trust proxy', true);
+
 const magicTokens = new Map<
   string,
   { email: string; expiresAt: number }
@@ -39,6 +44,9 @@ const loginAttempts = new Map<
   string,
   { count: number; resetAt: number }
 >();
+
+const userCredits = new Map<string, number>();
+const FREE_CREDITS = 50;
 
 const BLOCKED_DOMAINS = [
   "mailinator.com",
@@ -70,6 +78,37 @@ function checkRateLimit(ip: string): boolean {
   record.count += 1;
   return true;
 }
+
+function ensureCredits(userId: string) {
+  if (!userCredits.has(userId)) {
+    userCredits.set(userId, FREE_CREDITS);
+  }
+}
+
+function requireCredits(req: Request, res: Response, next: NextFunction) {
+  const user = req.session.user;
+  if (!user) {
+    if (req.path.startsWith('/api/')) {
+      return res.status(401).json({ error: "Unauthorized" });
+    }
+    return res.redirect("/login");
+  }
+
+  ensureCredits(user.userId);
+
+  const remaining = userCredits.get(user.userId) || 0;
+  if (remaining <= 0) {
+    if (req.path.startsWith('/api/')) {
+      return res.status(403).json({ error: "Free credits exhausted. Please upgrade." });
+    }
+    return res.status(403).send("Free credits exhausted. Please upgrade.");
+  }
+
+  next();
+}
+
+(app as any).requireCredits = requireCredits;
+(app as any).userCredits = userCredits;
 
 declare module 'http' {
   interface IncomingMessage {
@@ -218,9 +257,19 @@ export default async function runApp(
       email: record.email
     };
 
+    ensureCredits(userId);
+
     magicTokens.delete(token);
 
     res.redirect("/");
+  });
+
+  app.get("/api/credits", (req, res) => {
+    const user = req.session.user;
+    if (!user) return res.status(401).json({ error: "Unauthorized" });
+
+    ensureCredits(user.userId);
+    res.send({ credits: userCredits.get(user.userId) });
   });
 
   const server = await registerRoutes(app);

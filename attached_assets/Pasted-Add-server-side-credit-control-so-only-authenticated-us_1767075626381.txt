@@ -1,0 +1,107 @@
+Add server-side credit control so only authenticated users can use the primary tool and usage stops when credits reach zero.
+
+Steps to perform:
+
+In server/app.ts, add the following in-memory credit store and constants near the top of the file (outside routes):
+
+const userCredits = new Map<string, number>();
+const FREE_CREDITS = 50;
+
+
+Add a helper function to initialize credits on first login
+(place this anywhere above routes):
+
+function ensureCredits(userId: string) {
+  if (!userCredits.has(userId)) {
+    userCredits.set(userId, FREE_CREDITS);
+  }
+}
+
+
+Update the /auth/magic route to initialize credits after session creation
+(add the marked line only):
+
+ensureCredits(userId);
+
+
+Full context reminder (do not duplicate the whole route, just ensure this line exists after setting req.session.user).
+
+Add a credit-check middleware:
+
+function requireCredits(req, res, next) {
+  const user = req.session.user;
+  if (!user) {
+    return res.redirect("/login");
+  }
+
+  ensureCredits(user.userId);
+
+  const remaining = userCredits.get(user.userId) || 0;
+  if (remaining <= 0) {
+    return res.send("Free credits exhausted. Please upgrade.");
+  }
+
+  next();
+}
+
+
+Deduct credits only on successful tool usage.
+Wrap the primary tool execution route with this middleware and deduct after success.
+
+Example pattern (adjust route path only, do NOT refactor tool logic):
+
+app.post("/tool/run", requireCredits, async (req, res) => {
+  // existing tool logic runs here
+
+  const userId = req.session.user.userId;
+  const remaining = userCredits.get(userId) || 0;
+  userCredits.set(userId, remaining - 1);
+
+  // existing response logic continues
+});
+
+
+⚠️ Important rules:
+
+Deduct credits only after the tool succeeds
+
+Do NOT deduct on errors or validation failures
+
+Do NOT modify the tool’s internal logic
+
+(Optional) Add a simple endpoint to view remaining credits:
+
+app.get("/credits", (req, res) => {
+  const user = req.session.user;
+  if (!user) return res.redirect("/login");
+
+  ensureCredits(user.userId);
+  res.send({ credits: userCredits.get(user.userId) });
+});
+
+
+Do NOT:
+
+Add databases
+
+Change landing page UI
+
+Change primary tool logic
+
+Add payment systems
+
+Add OAuth or background jobs
+
+Expected result:
+
+Only authenticated users can use the tool
+
+Each verified email gets a fixed free credit allowance
+
+Credits decrement only on successful tool runs
+
+Tool usage is blocked when credits reach zero
+
+Same email always maps to the same credit balance
+
+Fully functional on Replit Free

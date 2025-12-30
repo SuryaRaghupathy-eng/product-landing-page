@@ -101,6 +101,14 @@ async function rateLimitedGeocode(url: string): Promise<any> {
 }
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  const requireCreditsMiddleware = (req: Request, res: Response, next: NextFunction) => {
+    const requireCredits = (app as any).requireCredits;
+    if (requireCredits) {
+      return requireCredits(req, res, next);
+    }
+    next();
+  };
+
   // Serve dashboard static files
   app.use("/dashboard", express.static(path.resolve(process.cwd(), "dashboard")));
   
@@ -418,8 +426,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.post("/api/grid-search", async (req, res) => {
+  app.post("/api/grid-search", requireCreditsMiddleware, async (req: Request, res: Response) => {
     try {
+      const userCredits = (app as any).userCredits;
+      
+      const user = (req as any).session.user;
+      if (!user) return res.status(401).json({ error: "Unauthorized" });
+
       const { gridPoints, keyword, targetWebsite } = req.body;
       
       if (!gridPoints || !Array.isArray(gridPoints) || gridPoints.length === 0) {
@@ -590,6 +603,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const top3Count = rankedResults.filter(r => r.rank <= 3).length;
       const top10Count = rankedResults.filter(r => r.rank <= 10).length;
       const top20Count = rankedResults.filter(r => r.rank <= 20).length;
+
+      // Deduct credit only on successful tool usage
+      if (userCredits) {
+        const userId = user.userId;
+        const remaining = userCredits.get(userId) || 0;
+        userCredits.set(userId, remaining - 1);
+        console.log(`User ${userId} used 1 credit. Remaining: ${remaining - 1}`);
+      }
 
       return res.json({
         keyword,
