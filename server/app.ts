@@ -315,6 +315,16 @@ export default async function runApp(
     res.redirect("/");
   });
 
+  app.post("/logout", (req, res) => {
+    req.session.destroy((err) => {
+      if (err) {
+        return res.status(500).send("Logout failed");
+      }
+
+      res.redirect("/login");
+    });
+  });
+
   app.get("/api/credits", (req, res) => {
     const user = (req.session as any).user;
     if (!user) return res.status(401).json({ error: "Unauthorized" });
