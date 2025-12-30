@@ -1,4 +1,5 @@
 import { type Server } from "node:http";
+import crypto from "crypto";
 
 import express, {
   type Express,
@@ -28,6 +29,47 @@ export function log(message: string, source = "express") {
 }
 
 export const app = express();
+
+const magicTokens = new Map<
+  string,
+  { email: string; expiresAt: number }
+>();
+
+const loginAttempts = new Map<
+  string,
+  { count: number; resetAt: number }
+>();
+
+const BLOCKED_DOMAINS = [
+  "mailinator.com",
+  "tempmail.com",
+  "10minutemail.com",
+  "guerrillamail.com"
+];
+
+const MAX_ATTEMPTS = 3;
+const WINDOW_MS = 60 * 60 * 1000; // 1 hour
+const TOKEN_TTL = 10 * 60 * 1000; // 10 minutes
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const record = loginAttempts.get(ip);
+
+  if (!record || now > record.resetAt) {
+    loginAttempts.set(ip, {
+      count: 1,
+      resetAt: now + WINDOW_MS
+    });
+    return true;
+  }
+
+  if (record.count >= MAX_ATTEMPTS) {
+    return false;
+  }
+
+  record.count += 1;
+  return true;
+}
 
 declare module 'http' {
   interface IncomingMessage {
@@ -119,13 +161,37 @@ export default async function runApp(
 
   app.post("/login", (req, res) => {
     const email = String(req.body.email || "").toLowerCase();
+    const ip = req.ip || "unknown";
+
+    if (!checkRateLimit(ip)) {
+      return res.send("Too many login attempts. Try again later.");
+    }
 
     if (!email || !email.includes("@")) {
       return res.send("Invalid email address");
     }
 
+    const domain = email.split("@")[1];
+    if (BLOCKED_DOMAINS.includes(domain)) {
+      return res.send("Disposable email addresses are not allowed");
+    }
+
+    const token = crypto.randomBytes(32).toString("hex");
+
+    magicTokens.set(token, {
+      email,
+      expiresAt: Date.now() + TOKEN_TTL
+    });
+
+    const baseUrl =
+      process.env.REPLIT_URL || "http://localhost:5000";
+
+    console.log(
+      `Magic login link for ${email}: ${baseUrl}/auth/magic?token=${token}`
+    );
+
     res.send(
-      "Login request received. Magic link generation will be added in the next phase."
+      "Login link generated. Check server console for the magic link."
     );
   });
 

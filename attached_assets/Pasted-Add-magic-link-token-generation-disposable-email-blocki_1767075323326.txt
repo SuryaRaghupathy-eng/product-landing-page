@@ -1,0 +1,120 @@
+Add magic-link token generation, disposable email blocking, and IP-based rate limiting to the existing /login POST route. Email delivery must be simulated by logging the magic link to the server console.
+
+Steps to perform:
+
+In server/app.ts, add the following imports at the top (if not already present):
+
+import crypto from "crypto";
+
+
+Add the following in-memory stores near the top of the file (outside routes):
+
+const magicTokens = new Map<
+  string,
+  { email: string; expiresAt: number }
+>();
+
+const loginAttempts = new Map<
+  string,
+  { count: number; resetAt: number }
+>();
+
+const BLOCKED_DOMAINS = [
+  "mailinator.com",
+  "tempmail.com",
+  "10minutemail.com",
+  "guerrillamail.com"
+];
+
+const MAX_ATTEMPTS = 3;
+const WINDOW_MS = 60 * 60 * 1000; // 1 hour
+const TOKEN_TTL = 10 * 60 * 1000; // 10 minutes
+
+
+Add the following rate-limit helper function:
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const record = loginAttempts.get(ip);
+
+  if (!record || now > record.resetAt) {
+    loginAttempts.set(ip, {
+      count: 1,
+      resetAt: now + WINDOW_MS
+    });
+    return true;
+  }
+
+  if (record.count >= MAX_ATTEMPTS) {
+    return false;
+  }
+
+  record.count += 1;
+  return true;
+}
+
+
+Replace the existing /login POST handler with the following:
+
+app.post("/login", (req, res) => {
+  const email = String(req.body.email || "").toLowerCase();
+  const ip = req.ip || "unknown";
+
+  if (!checkRateLimit(ip)) {
+    return res.send("Too many login attempts. Try again later.");
+  }
+
+  if (!email || !email.includes("@")) {
+    return res.send("Invalid email address");
+  }
+
+  const domain = email.split("@")[1];
+  if (BLOCKED_DOMAINS.includes(domain)) {
+    return res.send("Disposable email addresses are not allowed");
+  }
+
+  const token = crypto.randomBytes(32).toString("hex");
+
+  magicTokens.set(token, {
+    email,
+    expiresAt: Date.now() + TOKEN_TTL
+  });
+
+  const baseUrl =
+    process.env.REPLIT_URL || "http://localhost:3000";
+
+  console.log(
+    `Magic login link for ${email}: ${baseUrl}/auth/magic?token=${token}`
+  );
+
+  res.send(
+    "Login link generated. Check server console for the magic link."
+  );
+});
+
+
+Do NOT:
+
+Send real emails
+
+Add databases
+
+Modify landing page UI
+
+Modify tool logic
+
+Add OAuth or external services
+
+Expected result:
+
+/login POST now enforces rate limiting (3 per IP per hour)
+
+Disposable email domains are blocked
+
+A secure, random magic token is generated
+
+Magic login link is printed to the server console
+
+Token expires after 10 minutes
+
+No visible UI changes yet
