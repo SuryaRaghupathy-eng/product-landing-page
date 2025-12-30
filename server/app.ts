@@ -64,9 +64,11 @@ const MAX_ATTEMPTS_PER_DAY = 3;
 const DAY_MS = 24 * 60 * 60 * 1000;
 const TOKEN_TTL = 10 * 60 * 1000; // 10 minutes
 
-const BASE_URL =
-  process.env.REPLIT_URL ||
-  "https://aefcb2d2-f841-4d8c-a1d7-463bdfce8cf5-00-152qx0nryu6ax.riker.replit.dev";
+const APP_BASE_URL = process.env.APP_BASE_URL || "http://localhost:5000";
+
+if (!process.env.APP_BASE_URL) {
+  console.warn("⚠️ APP_BASE_URL is not set. Falling back to localhost.");
+}
 
 function checkRateLimit(key: string): boolean {
   const now = Date.now();
@@ -262,8 +264,7 @@ export default async function runApp(
       expiresAt: Date.now() + TOKEN_TTL
     });
 
-    const baseUrl = BASE_URL;
-    const magicLink = `${baseUrl}/auth/magic?token=${token}`;
+    const magicLink = `${APP_BASE_URL}/auth/magic?token=${token}`;
 
     if (process.env.NODE_ENV === "production" || process.env.RESEND_API_KEY) {
       await sendMagicLinkEmail(email, magicLink);
