@@ -33,7 +33,7 @@ export default function Step1Business() {
           <Button 
             variant="ghost" 
             size="sm" 
-            className="absolute -top-12 left-0 text-muted-foreground hover:text-primary transition-colors flex items-center gap-1 p-0 h-auto font-medium"
+            className="mb-4 text-muted-foreground hover:text-primary transition-colors flex items-center gap-1 p-0 h-auto font-medium"
             data-testid="link-back-to-landing"
           >
             <ChevronLeft className="w-4 h-4" />
