@@ -333,6 +333,17 @@ export default async function runApp(
     res.send({ credits: userCredits.get(user.userId) });
   });
 
+  app.get("/api/me", (req, res) => {
+    if (!req.session.user) {
+      return res.status(401).json({ error: "Not authenticated" });
+    }
+
+    res.json({
+      email: req.session.user.email,
+      plan: "Free" as const
+    });
+  });
+
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
