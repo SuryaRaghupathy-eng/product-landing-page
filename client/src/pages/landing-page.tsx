@@ -129,7 +129,7 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <Link href="/analyze">
+            <Link href="/geo-grid-dashboard">
               <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6">
                 Start Free Analysis
               </Button>
@@ -168,7 +168,7 @@ export default function LandingPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <Link href="/analyze">
+                <Link href="/geo-grid-dashboard">
                   <Button size="lg" className="h-14 px-10 text-lg bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-xl shadow-blue-500/20 group">
                     Run Your Free Analysis
                     <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -266,7 +266,7 @@ export default function LandingPage() {
                 <Button 
                   variant="outline" 
                   className="w-full bg-blue-600 text-white hover:bg-blue-700 border-none rounded-lg h-11"
-                  onClick={() => window.location.href = "/dashboard"}
+                  onClick={() => window.location.href = "/geo-grid-dashboard"}
                 >
                   <Zap className="mr-2 w-4 h-4 fill-current" />
                   Explore Tracking
@@ -374,7 +374,7 @@ export default function LandingPage() {
             <div className="max-w-2xl mx-auto space-y-8">
               <h2 className="text-4xl md:text-5xl font-black text-white">Ready to Get Started?</h2>
               <p className="text-blue-100 text-lg">Try it out for free - no credit card required</p>
-              <Link href="/analyze">
+              <Link href="/geo-grid-dashboard">
                 <Button size="lg" className="h-16 px-12 text-xl bg-white text-blue-600 hover:bg-blue-50 rounded-full shadow-2xl shadow-blue-900/40">
                   Run Your Free Geo Grid Analysis
                   <ChevronRight className="ml-2 w-6 h-6" />
