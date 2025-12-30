@@ -14,11 +14,59 @@ import {
   Menu,
   Star
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import accountIconPath from "@assets/generated_images/professional_modern_user_account_avatar_icon.png";
 
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const accountBtn = document.getElementById(
+      "account-btn"
+    ) as HTMLButtonElement | null;
+
+    const dropdown = document.getElementById(
+      "account-dropdown"
+    ) as HTMLDivElement | null;
+
+    if (!accountBtn || !dropdown) return;
+
+    const handleClick = async () => {
+      dropdown.hidden = !dropdown.hidden;
+
+      if (!dropdown.hidden) {
+        const meRes = await fetch("/api/me");
+        const creditsRes = await fetch("/api/credits");
+
+        if (meRes.ok && creditsRes.ok) {
+          const me = await meRes.json();
+          const credits = await creditsRes.json();
+
+          const emailEl = document.getElementById(
+            "account-email"
+          ) as HTMLDivElement;
+
+          const planEl = document.getElementById(
+            "account-plan"
+          ) as HTMLDivElement;
+
+          const creditsEl = document.getElementById(
+            "account-credits"
+          ) as HTMLDivElement;
+
+          emailEl.innerText = me.email;
+          planEl.innerText = `Plan: ${me.plan}`;
+          creditsEl.innerText = `Credits: ${credits.credits} / 50`;
+        }
+      }
+    };
+
+    accountBtn.addEventListener("click", handleClick);
+
+    return () => {
+      accountBtn.removeEventListener("click", handleClick);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-slate-950 font-sans selection:bg-blue-100 selection:text-blue-900">

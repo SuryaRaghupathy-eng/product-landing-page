@@ -1,0 +1,120 @@
+Wire the existing My Account button to toggle the dropdown and populate it with email, plan, and credits using the existing backend endpoints.
+
+Purpose
+
+Make the account dropdown functional by:
+
+Toggling visibility on click
+
+Fetching /api/me
+
+Fetching /api/credits
+
+Filling the dropdown fields
+
+Constraints
+
+Replit Free tier only
+
+TypeScript + React
+
+No backend changes
+
+No styling changes
+
+Use existing IDs (account-btn, account-dropdown, etc.)
+
+No logout wiring yet (next phase)
+
+Steps to perform
+1️⃣ Locate the component with the My Account button and dropdown
+
+You already have:
+
+<Button id="account-btn">My Account</Button>
+
+<div id="account-dropdown" hidden>
+  <div id="account-email"></div>
+  <div id="account-plan"></div>
+  <div id="account-credits"></div>
+  <hr />
+  <button id="logout-btn">Logout</button>
+</div>
+
+2️⃣ Add the toggle + fetch logic (TypeScript-safe)
+
+Add the following inside the same component, preferably near the bottom:
+
+import { useEffect } from "react";
+
+useEffect(() => {
+  const accountBtn = document.getElementById(
+    "account-btn"
+  ) as HTMLButtonElement | null;
+
+  const dropdown = document.getElementById(
+    "account-dropdown"
+  ) as HTMLDivElement | null;
+
+  if (!accountBtn || !dropdown) return;
+
+  const handleClick = async () => {
+    dropdown.hidden = !dropdown.hidden;
+
+    if (!dropdown.hidden) {
+      const meRes = await fetch("/api/me");
+      const creditsRes = await fetch("/api/credits");
+
+      if (meRes.ok && creditsRes.ok) {
+        const me = await meRes.json();
+        const credits = await creditsRes.json();
+
+        const emailEl = document.getElementById(
+          "account-email"
+        ) as HTMLDivElement;
+
+        const planEl = document.getElementById(
+          "account-plan"
+        ) as HTMLDivElement;
+
+        const creditsEl = document.getElementById(
+          "account-credits"
+        ) as HTMLDivElement;
+
+        emailEl.innerText = me.email;
+        planEl.innerText = `Plan: ${me.plan}`;
+        creditsEl.innerText = `Credits: ${credits.credits} / 50`;
+      }
+    }
+  };
+
+  accountBtn.addEventListener("click", handleClick);
+
+  return () => {
+    accountBtn.removeEventListener("click", handleClick);
+  };
+}, []);
+
+Expected result
+
+Clicking My Account:
+
+Shows the dropdown
+
+Fetches /api/me
+
+Fetches /api/credits
+
+Displays:
+
+Email
+
+Plan: Free
+
+Credits: X / 50
+
+Clicking again hides the dropdown
+
+No styling changes
+
+No logout action yet
